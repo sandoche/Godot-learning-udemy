@@ -1,10 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://LoonyLips.gd" type="Script" id=1]
 [ext_resource path="res://gfx/blackboard.jpg" type="Texture" id=2]
 [ext_resource path="res://gfx/Feltpen.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
 size = 40
 font_data = ExtResource( 3 )
 
@@ -25,16 +29,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DisplayText" type="Label" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 24.0
 margin_top = 24.0
 margin_right = -24.0
 margin_bottom = -24.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisplayText" type="Label" parent="VBoxContainer"]
+margin_top = 74.0
+margin_right = 976.0
+margin_bottom = 474.0
+rect_min_size = Vector2( 0, 400 )
 custom_fonts/font = SubResource( 1 )
 text = "Placeholder"
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PlayerText" type="LineEdit" parent="VBoxContainer"]
+margin_top = 479.0
+margin_right = 976.0
+margin_bottom = 552.0
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_entered" from="VBoxContainer/PlayerText" to="." method="_on_PlayerText_text_entered"]

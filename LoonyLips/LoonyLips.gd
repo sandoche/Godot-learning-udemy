@@ -10,19 +10,21 @@ onready var DisplayText = $VBoxContainer/DisplayText
 # onready var DisplayText = get_node("DisplayText")
 
 func _ready():
-	prompt_player()
+	DisplayText.text = "Welcome to loony lips! We are going to tell a story and have a wonderful time, "
+	check_player_words_length()
 
 func _on_PlayerText_text_entered(new_text):
 	add_to_player_words()
-	check_player_words_length()
 
 func _on_TextureButton_pressed():
 	add_to_player_words()
-	check_player_words_length()
+	
 
 func add_to_player_words():
 	player_words.append(PlayerText.text)
+	DisplayText.text = ''
 	PlayerText.clear()
+	check_player_words_length()
 
 func is_story_done():
 	return player_words.size() == prompts.size()
@@ -37,5 +39,5 @@ func tell_story():
 	DisplayText.text = story % player_words
 	
 func prompt_player():
-	DisplayText.text = "May I have " + prompts[player_words.size()] + " please?"
+	DisplayText.text += "May I have " + prompts[player_words.size()] + " please?"
 

@@ -12,6 +12,7 @@ onready var DisplayText = $VBoxContainer/DisplayText
 func _ready():
 	DisplayText.text = "Welcome to loony lips! We are going to tell a story and have a wonderful time, "
 	check_player_words_length()
+	PlayerText.grab_focus()
 
 func _on_PlayerText_text_entered(new_text):
 	add_to_player_words()

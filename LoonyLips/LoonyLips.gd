@@ -1,11 +1,15 @@
 extends Control
 
-func _ready():
-	var prompts = ["Yann", "minion", "greatest", "1999"]
-	var story = "Once upon a time %s watched %s and thought it was the %s movie since %s"
-	var finalText = story % prompts
+var player_words = []
+var story = "Once upon a time %s watched %s and thought it was the %s movie since %s"
+var prompts = ["Yann", "minion", "greatest", "1999"]
 
-	$VBoxContainer/DisplayText.text = finalText
+onready var PlayerText = $VBoxContainer/HBoxContainer/PlayerText
+onready var DisplayText = $VBoxContainer/DisplayText
+
+func _ready():
+	var finalText = story % prompts
+	DisplayText.text = finalText
 
 # 	Could also be replaced by this:
 #	var label = get_node("DisplayText")
@@ -16,9 +20,9 @@ func _on_PlayerText_text_entered(new_text):
 	update_DisplayText(new_text)
 
 func _on_TextureButton_pressed():
-	update_DisplayText($VBoxContainer/HBoxContainer/PlayerText.text)	
+	update_DisplayText(PlayerText.text)	
 
 func update_DisplayText(new_text):
-	$VBoxContainer/DisplayText.text = new_text
-	$VBoxContainer/HBoxContainer/PlayerText.clear()
+	DisplayText.text = new_text
+	PlayerText.clear()
 

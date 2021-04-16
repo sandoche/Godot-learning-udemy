@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://LoonyLips.gd" type="Script" id=1]
 [ext_resource path="res://gfx/blackboard.jpg" type="Texture" id=2]
 [ext_resource path="res://gfx/Feltpen.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://gfx/blue_button12.png" type="Texture" id=4]
 [ext_resource path="res://gfx/blue_button11.png" type="Texture" id=5]
+[ext_resource path="res://Story.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -97,5 +98,17 @@ text = "OK"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="StoryBook" type="Node" parent="."]
+
+[node name="Story0" type="Node" parent="StoryBook"]
+script = ExtResource( 6 )
+prompts = PoolStringArray( "a name", "a noun", "an adverb", "an adjective" )
+story = "Once upon a time someone called %s ate a %s flavoured sandwich which made him feel all %s inside. It was a %s day"
+
+[node name="Story1" type="Node" parent="StoryBook"]
+script = ExtResource( 6 )
+prompts = PoolStringArray( "a name", "an object", "another object" )
+story = "Once upon a time %s was trying to build a %s but built instead a %s"
 [connection signal="text_entered" from="VBoxContainer/HBoxContainer/PlayerText" to="." method="_on_PlayerText_text_entered"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

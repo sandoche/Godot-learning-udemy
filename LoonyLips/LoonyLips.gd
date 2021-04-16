@@ -1,7 +1,7 @@
 extends Control
 
 var player_words = []
-var story = "Once upon a time %s watched %s and thought it was the %s movie since %s"
+var story = "Once upon a time someone called %s ate a %s flavoured sandwich which made him feel all %s inside. It was a %s day"
 var prompts = ["a name", "a noun", "an adverb", "an adjective"]
 
 onready var PlayerText = $VBoxContainer/HBoxContainer/PlayerText
@@ -17,7 +17,10 @@ func _on_PlayerText_text_entered(new_text):
 	add_to_player_words()
 
 func _on_TextureButton_pressed():
-	add_to_player_words()
+	if is_story_done():
+		get_tree().reload_current_scene()
+	else:
+		add_to_player_words()
 	
 
 func add_to_player_words():
@@ -31,7 +34,7 @@ func is_story_done():
 
 func check_player_words_length():
 	if is_story_done():
-		tell_story()
+		end_game()
 	else:
 		prompt_player()
 
@@ -41,3 +44,7 @@ func tell_story():
 func prompt_player():
 	DisplayText.text += "May I have " + prompts[player_words.size()] + " please?"
 
+func end_game():
+	PlayerText.queue_free()
+	$VBoxContainer/HBoxContainer/Label.text = 'Again!'
+	tell_story()

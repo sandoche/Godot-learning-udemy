@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 640, 640 )
+extents = Vector2( 320, 320 )
 
 [node name="Level1" type="Node2D"]
 
@@ -12,13 +12,13 @@ extents = Vector2( 640, 640 )
 position = Vector2( 514.685, 230.833 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 513.158, 1097.59 )
+position = Vector2( 508.401, 783.636 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
-scale = Vector2( 10, 10 )
+scale = Vector2( 5, 5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]

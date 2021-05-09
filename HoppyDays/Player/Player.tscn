@@ -26,5 +26,7 @@ position = Vector2( 750, 0 )
 current = true
 zoom = Vector2( 3, 3 )
 limit_left = 0
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
 
 [connection signal="animate" from="." to="PlayerAnimation" method="_on_Player_animate"]

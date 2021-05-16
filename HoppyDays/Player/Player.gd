@@ -55,6 +55,8 @@ func hurt():
 	yield(get_tree(), "idle_frame") # to wait a frame
 	motion.y -= JUMP_SPEED
 	lives -= 1
+	$AudioStreamPlayer.stream = load("res://SFX/pain.ogg")
+	$AudioStreamPlayer.play()
 	
 	if lives < 0:
 		end_game()

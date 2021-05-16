@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Hazards/SpikeTop.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SFX/Summer_Park.ogg" type="AudioStream" id=4]
 
 [node name="Level1" type="Node2D"]
 
@@ -34,3 +35,7 @@ position = Vector2( 4246.82, 607.838 )
 
 [node name="SpikeTop6" parent="Hazards" instance=ExtResource( 3 )]
 position = Vector2( 5370.67, 285.298 )
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true

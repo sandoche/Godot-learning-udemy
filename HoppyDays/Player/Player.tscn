@@ -82,4 +82,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
 [connection signal="animate" from="." to="PlayerAnimation" method="_on_Player_animate"]

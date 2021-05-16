@@ -33,6 +33,8 @@ func apply_gravity():
 func jump():
 	if Input.is_action_pressed("jump") and is_on_floor():
 		motion.y -= JUMP_SPEED
+		$AudioStreamPlayer.stream = load("res://SFX/jump1.ogg")
+		$AudioStreamPlayer.play()
 		
 func move():
 	if Input.is_action_pressed("left") and !Input.is_action_pressed("right"):

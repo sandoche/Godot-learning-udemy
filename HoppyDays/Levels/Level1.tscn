@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Hazards/SpikeTop.tscn" type="PackedScene" id=3]
 
 [node name="Level1" type="Node2D"]
 
@@ -13,3 +14,23 @@ tile_set = ExtResource( 2 )
 collision_layer = 2
 format = 1
 tile_data = PoolIntArray( -1245174, 6, 0, -1245125, 6, 0, -1048573, 6, 0, -1048540, 3, 0, -917470, 3, 0, -917443, 6, 0, -655364, 6, 0, -720882, 6, 0, -720865, 3, 0, -720856, 3, 0, -720826, 6, 0, -524190, 6, 0, -458725, 3, 0, -262119, 3, 0, -262062, 2, 0, -196606, 6, 0, -196573, 1, 0, -196548, 6, 0, -131054, 1, 0, -65487, 3, 0, 131067, 0, 0, 131169, 6, 0, 196634, 1, 0, 262184, 1, 0, 327735, 2, 0, 327754, 2, 0, 327762, 6, 0, 458758, 0, 0, 524377, 6, 0, 524386, 6, 0, 655375, 0, 0, 655394, 1, 0, 655401, 3, 0, 655423, 2, 0, 720943, 3, 0, 851965, 0, 0, 983053, 3, 0, 983062, 2, 0, 983093, 6, 0, 1048651, 6, 0, 1114149, 6, 0, 1179651, 2, 0, 1310799, 6, 0, 1572862, 6, 0, 1572873, 2, 0, 1769513, 6, 0, 1769524, 2, 0, 1769532, 2, 0, 1966134, 6, 0, 2162711, 6, 0, 2228274, 6, 0, 2359354, 6, 0, 2752571, 6, 0, 2818082, 6, 0 )
+
+[node name="Hazards" type="Node" parent="."]
+
+[node name="SpikeTop" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 1209.73, 620.483 )
+
+[node name="SpikeTop2" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 419.182, 1129.6 )
+
+[node name="SpikeTop3" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 2276.04, 613.412 )
+
+[node name="SpikeTop4" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 2578.69, 1058.89 )
+
+[node name="SpikeTop5" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 4246.82, 607.838 )
+
+[node name="SpikeTop6" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 5370.67, 285.298 )

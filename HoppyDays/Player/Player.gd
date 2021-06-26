@@ -7,6 +7,7 @@ const GRAVITY = 150
 const UP = Vector2(0,-1)
 const JUMP_SPEED = 3500
 const WORLD_LIMIT = 4000
+const BOOST_MULTIPLIER = 2
 
 var lives = 3
 
@@ -58,3 +59,7 @@ func hurt():
 	
 	if lives < 0:
 		end_game()
+
+func boost():
+	motion.y -= JUMP_SPEED * BOOST_MULTIPLIER
+	

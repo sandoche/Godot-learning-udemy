@@ -61,5 +61,8 @@ func hurt():
 		end_game()
 
 func boost():
+	position.y -=1
+	yield(get_tree(), "idle_frame") # to wait a frame
 	motion.y -= JUMP_SPEED * BOOST_MULTIPLIER
+	$JumpSFX.play()
 	

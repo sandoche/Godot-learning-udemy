@@ -1,6 +1,7 @@
 extends Node2D
 
 var lives = 3
+var coins = 0
 
 func _ready():
 	add_to_group("Gamestate")
@@ -13,8 +14,12 @@ func hurt():
 	if lives < 0:
 		end_game()
 
-func end_game():
-	get_tree().change_scene("res://Scenes/GameOver.tscn")
+func coin_up():
+	coins += 1
+	get_tree().call_group("GUI", "update_coins", coins)
 
 func update_GUI():
 	get_tree().call_group("GUI", "update_lives", lives)
+
+func end_game():
+	get_tree().change_scene("res://Scenes/GameOver.tscn")

@@ -2,7 +2,7 @@ extends Node2D
 
 var lives = 3
 var coins = 0
-const target_number_of_coins = 2
+const target_number_of_coins = 10
 
 func _ready():
 	add_to_group("Gamestate")

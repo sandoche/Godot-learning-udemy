@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Items/JumpPad.tscn" type="PackedScene" id=5]
 [ext_resource path="res://State/GameState.gd" type="Script" id=6]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=8]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 6 )
@@ -30,6 +31,11 @@ position = Vector2( 2454.33, 1065.89 )
 
 [node name="JumpPad3" parent="JumpPads" instance=ExtResource( 5 )]
 position = Vector2( 3091.85, 662.719 )
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 94.75, 690.75 )
 
 [node name="Hazards" type="Node" parent="."]
 

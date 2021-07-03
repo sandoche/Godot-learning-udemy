@@ -146,3 +146,18 @@ autoplay = true
 position = Vector2( 3584.3, 877.485 )
 
 [node name="Spikeman" parent="NPCs/SpikemanContainer" instance=ExtResource( 9 )]
+
+[node name="SpikemanContainer2" type="Node2D" parent="NPCs"]
+position = Vector2( 2808.3, 1645.48 )
+
+[node name="Spikeman" parent="NPCs/SpikemanContainer2" instance=ExtResource( 9 )]
+
+[node name="SpikemanContainer3" type="Node2D" parent="NPCs"]
+position = Vector2( 311.192, -272.384 )
+
+[node name="Spikeman" parent="NPCs/SpikemanContainer3" instance=ExtResource( 9 )]
+
+[node name="SpikemanContainer4" type="Node2D" parent="NPCs"]
+position = Vector2( 4990.01, 942.236 )
+
+[node name="Spikeman" parent="NPCs/SpikemanContainer4" instance=ExtResource( 9 )]

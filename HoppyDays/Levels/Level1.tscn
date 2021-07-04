@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPCs/Spikeman.tscn" type="PackedScene" id=9]
 [ext_resource path="res://NPCs/Cloud.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Items/Portal.tscn" type="PackedScene" id=11]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 6 )
@@ -164,7 +165,7 @@ position = Vector2( 4990.01, 942.236 )
 [node name="Spikeman" parent="NPCs/SpikemanContainer4" instance=ExtResource( 9 )]
 
 [node name="Cloud" parent="NPCs" instance=ExtResource( 10 )]
-position = Vector2( 922.28, -380.976 )
+position = Vector2( 3773.33, 1307.21 )
 
 [node name="Cloud2" parent="NPCs" instance=ExtResource( 10 )]
 position = Vector2( 1848.66, -957.627 )
@@ -174,3 +175,6 @@ position = Vector2( 3733.45, -498.442 )
 
 [node name="Cloud4" parent="NPCs" instance=ExtResource( 10 )]
 position = Vector2( 5172.41, -479.754 )
+
+[node name="Portal" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6460.89, -754.294 )

@@ -23,6 +23,7 @@ tracks/0/keys = {
 [node name="Cloud" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.545098, 0.52549, 0.584314, 1 )
 texture = ExtResource( 1 )
 
 [node name="Timer" type="Timer" parent="Sprite"]

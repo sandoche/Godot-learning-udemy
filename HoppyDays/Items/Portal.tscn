@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://GFX/Items/portal_yellow.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Particles/portal_yellowParticle.png" type="Texture" id=2]
+[ext_resource path="res://Items/Portal.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 115.125, 41.5 )
@@ -36,9 +37,11 @@ hue_variation = 0.1
 hue_variation_random = 0.5
 
 [node name="Portal" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Area2D" type="Area2D" parent="."]
 scale = Vector2( 0.75, 1 )
+collision_layer = 0
 
 [node name="Sprite" type="Sprite" parent="Area2D"]
 texture = ExtResource( 1 )
@@ -57,3 +60,5 @@ lifetime = 2.0
 randomness = 0.55
 process_material = SubResource( 3 )
 texture = ExtResource( 2 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

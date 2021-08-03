@@ -7,6 +7,7 @@ func _physics_process(delta):
 	move_and_slide(motion)
 	
 func update_movements():
+	look_at(get_global_mouse_position())
 	if Input.is_action_pressed("move_down") and not Input.is_action_pressed("move_up"):
 		motion.y = clamp(motion.y + SPEED, 0, MAX_SPEED)
 	elif Input.is_action_pressed("move_up") and not Input.is_action_pressed("move_down"):

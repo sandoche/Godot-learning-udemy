@@ -7,20 +7,30 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends \"res://Characters/TemplateCharacter.gd\"
 
+const FOV_TOLERANCE = 20
+const RED = Color(1,0.25,0.25) 
+const WHITE = Color(1,1,1)
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
+var Player
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	# Search node by name
+	Player = get_node(\"/root\").find_node(\"Player\", true, false)
+	
+func _process(delta):
+	if Player_in_FOV():
+		$Torch.color = RED
+	else:
+		$Torch.color = WHITE
+		
+func Player_in_FOV():
+	var npc_facing_direction = Vector2(1,0).rotated(global_rotation)
+	var direction_to_Player = (Player.position - global_position).normalized()
+	
+	if abs(direction_to_Player.angle_to(npc_facing_direction)) < deg2rad(FOV_TOLERANCE):
+		return true
+	else:
+		return false
 "
 
 [sub_resource type="RectangleShape2D" id=2]

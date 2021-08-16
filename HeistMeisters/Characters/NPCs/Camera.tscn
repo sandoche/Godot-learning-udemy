@@ -1,13 +1,31 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Lightmaps/Torch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GFX/PNG/Tiles/tile_536.png" type="Texture" id=2]
 [ext_resource path="res://GFX/PNG/Tiles/tile_463.png" type="Texture" id=3]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="GDScript" id=1]
+script/source = "extends \"res://Characters/TemplateCharacter.gd\"
 
-[sub_resource type="Animation" id=2]
-resource_name = "CameraRotation"
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="Animation" id=3]
 length = 12.0
 loop = true
 step = 1.0
@@ -33,6 +51,7 @@ texture = ExtResource( 3 )
 [node name="CameraBody" type="KinematicBody2D" parent="."]
 position = Vector2( 8.09361, 0 )
 rotation = -0.523599
+script = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -49,8 +68,8 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CameraBody"]
 visible = false
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CameraBody"]
 autoplay = "CameraRotation"
-anims/CameraRotation = SubResource( 2 )
+anims/CameraRotation = SubResource( 3 )

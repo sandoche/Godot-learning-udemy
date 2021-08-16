@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Lightmaps/Torch.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GFX/PNG/Tiles/tile_536.png" type="Texture" id=2]
+[ext_resource path="res://GFX/PNG/Tiles/tile_463.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Camera" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="CameraBody" type="KinematicBody2D" parent="."]
+position = Vector2( -32.0592, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Torch" parent="CameraBody" instance=ExtResource( 1 )]
+position = Vector2( 50, 0 )
+shadow_enabled = true
+
+[node name="Sprite" type="Sprite" parent="CameraBody"]
+position = Vector2( 42.7631, 0 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CameraBody"]
+visible = false
+shape = SubResource( 1 )

@@ -31,15 +31,16 @@ func move():
 	move_and_slide(motion)
 
 func update_path():
-	if path.size() == 1 and $Timer.is_stopped():
-		$Timer.start()
+	if path.size() == 1:
+		if $Timer.is_stopped():
+			$Timer.start()
 	else:
 		path.remove(0)
 		
 
 func make_path():
 	var new_destination = possible_destinations[randi() % possible_destinations.size() - 1]
-	path = navigation.get_simple_path(position, new_destination.position)
+	path = navigation.get_simple_path(position, new_destination.position, false)
 
 func _on_Timer_timeout():
 	make_path()

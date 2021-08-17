@@ -5,14 +5,6 @@
 
 [node name="TemplateLevel" type="Node2D"]
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 128, 128 )
-collision_layer = 2
-collision_mask = 5
-format = 1
-tile_data = PoolIntArray( -262151, 4, 0, -262150, 4, 2, -262149, 4, 2, -262148, 4, 1, -196615, 4, 65538, -196614, 5, 0, -196613, 5, 0, -196612, 4, 65538, -131079, 4, 65538, -131078, 5, 0, -131077, 5, 0, -131076, 4, 65538, -65543, 4, 65536, -65542, 4, 2, -65541, 4, 2, -65540, 4, 65537 )
-
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
 [node name="TileMap" type="TileMap" parent="Navigation2D"]

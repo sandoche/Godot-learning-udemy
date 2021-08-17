@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=149 format=2]
+[gd_resource type="TileSet" load_steps=155 format=2]
 
 [ext_resource path="res://GFX/Tilesheet/tilesheet_complete_2X.png" type="Texture" id=1]
 
@@ -443,6 +443,30 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 [sub_resource type="ConvexPolygonShape2D" id=147]
 points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 
+[sub_resource type="NavigationPolygon" id=148]
+vertices = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=149]
+vertices = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=150]
+vertices = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=151]
+vertices = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=152]
+vertices = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
+[sub_resource type="NavigationPolygon" id=153]
+vertices = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+
 [resource]
 0/name = "Sprite"
 0/texture = ExtResource( 1 )
@@ -881,7 +905,7 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 5/autotile/tile_size = Vector2( 128, 128 )
 5/autotile/spacing = 0
 5/autotile/occluder_map = [  ]
-5/autotile/navpoly_map = [  ]
+5/autotile/navpoly_map = [ Vector2( 0, 0 ), SubResource( 148 ), Vector2( 1, 0 ), SubResource( 149 ), Vector2( 2, 0 ), SubResource( 150 ), Vector2( 3, 0 ), SubResource( 151 ), Vector2( 4, 0 ), SubResource( 152 ), Vector2( 5, 0 ), SubResource( 153 ) ]
 5/autotile/priority_map = [ Vector3( 0, 0, 2 ) ]
 5/autotile/z_index_map = [  ]
 5/occluder_offset = Vector2( 0, 0 )

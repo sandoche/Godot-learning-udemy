@@ -5,3 +5,4 @@
 [node name="Torch" type="Light2D"]
 texture = ExtResource( 1 )
 offset = Vector2( 320, 0 )
+shadow_enabled = true

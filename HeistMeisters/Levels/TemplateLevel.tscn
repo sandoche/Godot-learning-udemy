@@ -15,6 +15,11 @@ collision_mask = 5
 format = 1
 tile_data = PoolIntArray( -262151, 4, 0, -262150, 4, 2, -262149, 4, 2, -262148, 4, 1, -196615, 4, 65538, -196614, 5, 0, -196613, 5, 0, -196612, 4, 65538, -131079, 4, 65538, -131078, 5, 0, -131077, 5, 0, -131076, 4, 65538, -65543, 4, 65536, -65542, 4, 2, -65541, 4, 2, -65540, 4, 65537 )
 
+[node name="Destinations" type="Node" parent="Navigation2D"]
+
+[node name="Furnitures" type="TileMap" parent="Navigation2D"]
+format = 1
+
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( -649.792, -400.291 )
 

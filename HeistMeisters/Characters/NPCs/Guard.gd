@@ -28,6 +28,10 @@ func navigate():
 func move():
 	look_at(path[0])
 	motion = (path[0] - position).normalized() * (MAX_SPEED * walk_speed)
+	
+	if is_on_wall():
+		make_path()
+
 	move_and_slide(motion)
 
 func update_path():

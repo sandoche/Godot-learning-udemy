@@ -25,11 +25,15 @@ func Button_pressed(value):
 
 func check_guess():
 	if guess == combination:
+		$AudioStreamPlayer.stream = load("res://SFX/threeTone1.ogg")
+		$AudioStreamPlayer.play()
 		emit_signal("combination_correct")
 	else:
 		reset_lock()
 		
 func enter(value):
+	$AudioStreamPlayer.stream = load("res://SFX/twoTone1.ogg")
+	$AudioStreamPlayer.play()
 	guess.append(value)
 	update_display()
 	if guess.size() == combination.size():

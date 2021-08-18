@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://GFX/Interface/Fonts/kenvector_future.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://GFX/Interface/PNG/metalPanel.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_redCorner.png" type="Texture" id=10]
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_yellowCorner.png" type="Texture" id=11]
 [ext_resource path="res://Interface/Numpad.gd" type="Script" id=12]
+[ext_resource path="res://SFX/threeTone1.ogg" type="AudioStream" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 18
@@ -212,3 +213,4 @@ custom_styles/normal = SubResource( 6 )
 text = "OK"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )

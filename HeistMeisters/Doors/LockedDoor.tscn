@@ -16,3 +16,5 @@ texture = ExtResource( 2 )
 [node name="Numpad" parent="CanvasLayer" index="0" instance=ExtResource( 3 )]
 margin_right = 300.0
 margin_bottom = 400.0
+
+[connection signal="combination_correct" from="CanvasLayer/Numpad" to="." method="_on_Numpad_combination_correct"]

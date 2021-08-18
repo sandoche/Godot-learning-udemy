@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://GFX/PNG/Tiles/tile_473.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 42 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 10 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+closed = false
+polygon = PoolVector2Array( -32.1683, -9.15049, 31.9561, -8.67855, 31.8971, 9.25506, -32.3453, 9.01909 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Open"
+length = 4.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("DoorSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -64, 0 ), Vector2( -64, 0 ), Vector2( 0, 0 ) ]
+}
+
+[node name="Door" type="Area2D"]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CharacterDetector" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="DoorSprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="DoorSprite"]
+collision_layer = 2
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorSprite/StaticBody2D"]
+visible = false
+shape = SubResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="DoorSprite"]
+visible = false
+position = Vector2( 0.176971, 0 )
+occluder = SubResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Open = SubResource( 4 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

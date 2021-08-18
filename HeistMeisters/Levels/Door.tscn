@@ -46,7 +46,7 @@ tracks/1/keys = {
 "start_offset": 0.0,
 "stream": ExtResource( 2 )
 } ],
-"times": PoolRealArray( 0, 3 )
+"times": PoolRealArray( 0, 3.75 )
 }
 
 [node name="Door" type="Area2D"]

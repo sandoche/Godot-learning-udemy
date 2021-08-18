@@ -12,3 +12,4 @@ func _on_Door_body_exited(body):
 
 func _on_Numpad_combination_correct():
 	open()
+	$CanvasLayer/Numpad.hide()

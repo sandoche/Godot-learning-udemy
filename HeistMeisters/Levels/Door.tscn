@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GFX/PNG/Tiles/tile_473.png" type="Texture" id=1]
-[ext_resource path="res://SFX/doorClose_1.ogg" type="AudioStream" id=2]
+[ext_resource path="res://SFX/doorClose_4.ogg" type="AudioStream" id=2]
 [ext_resource path="res://SFX/doorOpen_2.ogg" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -30,29 +30,23 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( -64, 0 ), Vector2( -64, 0 ), Vector2( 0, 0 ) ]
 }
-tracks/1/type = "value"
-tracks/1/path = NodePath("AudioStreamPlayer2D:stream")
+tracks/1/type = "audio"
+tracks/1/path = NodePath("AudioStreamPlayer2D")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 2 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("AudioStreamPlayer2D:playing")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 4 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 3 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 2 )
+} ],
+"times": PoolRealArray( 0, 3 )
 }
 
 [node name="Door" type="Area2D"]

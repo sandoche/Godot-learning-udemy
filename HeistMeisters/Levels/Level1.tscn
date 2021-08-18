@@ -292,3 +292,17 @@ rotation = 3.95938
 
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 5 )]
 position = Vector2( -64, 191 )
+
+[node name="Door2" parent="Doors" index="1" instance=ExtResource( 5 )]
+position = Vector2( 193.459, 704 )
+rotation = 1.5708
+
+[node name="Door3" parent="Doors" index="2" instance=ExtResource( 5 )]
+position = Vector2( 319.297, -573 )
+
+[node name="Door4" parent="Doors" index="3" instance=ExtResource( 5 )]
+position = Vector2( 1344, -322.416 )
+
+[node name="Door5" parent="Doors" index="4" instance=ExtResource( 5 )]
+position = Vector2( 960, 448 )
+rotation = 1.5708

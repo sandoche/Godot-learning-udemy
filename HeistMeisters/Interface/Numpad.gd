@@ -8,6 +8,9 @@ onready var light =  $VBoxContainer/ButtonContainer/GridContainer/StatusLight
 
 signal combination_correct
 
+const FAIL_LIGHT = "res://GFX/Interface/PNG/dotRed.png"
+const SUCCESS_LIGHT = "res://GFX/Interface/PNG/dotGreen.png"
+
 func _ready():
 	connect_buttons()
 	reset_lock()
@@ -27,7 +30,8 @@ func check_guess():
 	if guess == combination:
 		$AudioStreamPlayer.stream = load("res://SFX/threeTone1.ogg")
 		$AudioStreamPlayer.play()
-		emit_signal("combination_correct")
+		$VBoxContainer/ButtonContainer/GridContainer/StatusLight.texture = load(SUCCESS_LIGHT)
+		$Timer.start()
 	else:
 		reset_lock()
 		
@@ -45,3 +49,8 @@ func update_display():
 func reset_lock():
 	display.text = ""
 	guess.clear()
+	$VBoxContainer/ButtonContainer/GridContainer/StatusLight.texture = load(FAIL_LIGHT)
+
+
+func _on_Timer_timeout():
+	emit_signal("combination_correct")

@@ -327,6 +327,7 @@ vertices = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 
 [resource]
+resource_local_to_scene = true
 4/name = "WALLS"
 4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
@@ -668,7 +669,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 "shape": SubResource( 100 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-4/z_index = 0
+4/z_index = 2
 5/name = "FLOOR"
 5/texture = ExtResource( 1 )
 5/tex_offset = Vector2( 0, 0 )

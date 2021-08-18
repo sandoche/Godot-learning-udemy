@@ -34,3 +34,5 @@ current = true
 [node name="Guards" type="Node" parent="."]
 
 [node name="Doors" type="Node" parent="."]
+
+[node name="LockedDoors" type="Node" parent="."]

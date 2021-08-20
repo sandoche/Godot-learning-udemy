@@ -60,6 +60,7 @@ toggle_vision_mode={
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Tilemap"
 2d_physics/layer_3="NPC"
+2d_physics/layer_4="Computers"
 
 [physics]
 

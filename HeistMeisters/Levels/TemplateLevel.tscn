@@ -19,6 +19,8 @@ tile_data = PoolIntArray( -262151, 4, 0, -262150, 4, 2, -262149, 4, 2, -262148, 
 [node name="Destinations" type="Node" parent="Navigation2D"]
 
 [node name="Furnitures" type="TileMap" parent="Navigation2D"]
+collision_layer = 2
+collision_mask = 5
 format = 1
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
@@ -36,3 +38,5 @@ current = true
 [node name="Doors" type="Node" parent="."]
 
 [node name="LockedDoors" type="Node" parent="."]
+
+[node name="Computers" type="Node" parent="."]

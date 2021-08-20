@@ -1,11 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GFX/PNG/Tiles/tile_537.png" type="Texture" id=1]
 [ext_resource path="res://Computer/Computer.gd" type="Script" id=2]
-[ext_resource path="res://GFX/Interface/PNG/metalPanel_plate.png" type="Texture" id=3]
-[ext_resource path="res://GFX/Interface/PNG/glassPanel.png" type="Texture" id=4]
-[ext_resource path="res://GFX/Interface/PNG/dotGreen.png" type="Texture" id=5]
-[ext_resource path="res://Interface/Theme.tres" type="Theme" id=6]
+[ext_resource path="res://Computer/ComputerPopup.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 32 )
@@ -18,85 +15,18 @@ rotation = 1.5708
 texture = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 position = Vector2( 64, 0 )
+collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -29.9231, 0 )
 shape = SubResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ComputerPopup" type="Popup" parent="CanvasLayer"]
-visible = true
-margin_right = 40.0
-margin_bottom = 40.0
-rect_min_size = Vector2( 600, 480 )
-theme = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/ComputerPopup"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 3 )
-patch_margin_left = 10
-patch_margin_top = 10
-patch_margin_right = 10
-patch_margin_bottom = 10
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/ComputerPopup/NinePatchRect"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = 20.0
-margin_right = -20.0
-margin_bottom = -20.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/ComputerPopup/NinePatchRect/CenterContainer"]
-margin_right = 560.0
-margin_bottom = 440.0
-rect_min_size = Vector2( 560, 440 )
-texture = ExtResource( 4 )
-patch_margin_left = 10
-patch_margin_top = 10
-patch_margin_right = 10
-patch_margin_bottom = 10
-
-[node name="Label" type="Label" parent="CanvasLayer/ComputerPopup/NinePatchRect/CenterContainer/NinePatchRect"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = 20.0
-margin_right = -20.0
-margin_bottom = -20.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Test"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ComputerPopup"]
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -34.6855
-margin_top = -15.6629
-margin_right = -24.6855
-margin_bottom = -5.6629
-rect_scale = Vector2( 0.995876, 1.05015 )
-texture = ExtResource( 5 )
-expand = true
-stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="ComputerPopup" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]

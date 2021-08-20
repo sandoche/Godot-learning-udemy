@@ -1,10 +1,6 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+var can_click = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,8 +13,12 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	pass # Replace with function body.
-
+	can_click = true
 
 func _on_Area2D_body_exited(body):
-	pass # Replace with function body.
+	can_click = false
+	$CanvasLayer/ComputerPopup.hide()
+
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if Input.is_mouse_button_pressed(BUTTON_LEFT) and can_click:
+		$CanvasLayer/ComputerPopup.popup_centered()

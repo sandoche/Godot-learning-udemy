@@ -1,6 +1,6 @@
 extends Popup
 
-var combination = [0,5,4,1]
+var combination = []
 var guess = []
 
 onready var display = $VBoxContainer/DisplayContainer/Display

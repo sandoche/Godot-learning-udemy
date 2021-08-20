@@ -14,6 +14,10 @@ config/name="Heist Meisters"
 run/main_scene="res://Levels/Level1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+CombinationGenerator="*res://Doors/CombinationGenerator.gd"
+
 [global]
 
 color=false

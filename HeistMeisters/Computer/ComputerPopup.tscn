@@ -1,15 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://GFX/Interface/PNG/glassPanel.png" type="Texture" id=1]
 [ext_resource path="res://GFX/Interface/PNG/dotGreen.png" type="Texture" id=2]
 [ext_resource path="res://GFX/Interface/PNG/metalPanel_plate.png" type="Texture" id=3]
 [ext_resource path="res://Interface/Theme.tres" type="Theme" id=4]
+[ext_resource path="res://Computer/ComputerPopup.gd" type="Script" id=5]
 
 [node name="ComputerPopup" type="Popup"]
 margin_right = 40.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 600, 480 )
 theme = ExtResource( 4 )
+script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -56,6 +58,7 @@ margin_right = -20.0
 margin_bottom = -20.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Test"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

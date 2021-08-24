@@ -5,6 +5,9 @@ var disguised = false
 
 const PLAYER_SPRITE = "res://GFX/PNG/Hitman 1/hitman1_stand.png"
 const BOX_SPRITE = "res://GFX/PNG/Tiles/tile_156.png"
+const PLAYER_OCCLUDER = "res://Characters/HumanOccluder.tres"
+const BOX_OCCLUDER = "res://Characters/BoxOccluder.tres"
+
 
 func _physics_process(delta):
 	update_movements()
@@ -41,10 +44,12 @@ func toggle_disguise():
 
 func reveal():
 	$Sprite.texture = load(PLAYER_SPRITE)
+	$LightOccluder2D.occluder = load(PLAYER_OCCLUDER)
 	disguised = false
 	collision_layer = 1
 
 func disguise():
 	$Sprite.texture = load(BOX_SPRITE)
+	$LightOccluder2D.occluder = load(BOX_OCCLUDER)
 	disguised = true
 	collision_layer = 16

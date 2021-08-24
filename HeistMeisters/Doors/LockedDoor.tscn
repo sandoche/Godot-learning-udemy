@@ -18,7 +18,10 @@ texture = ExtResource( 2 )
 margin_right = 300.0
 margin_bottom = 400.0
 
-[node name="Label" type="Label" parent="." index="5"]
+[node name="Label" type="Label" parent="." index="5" groups=[
+"labels",
+]]
+visible = false
 margin_left = -13.5
 margin_top = 22.0
 margin_right = 66.5

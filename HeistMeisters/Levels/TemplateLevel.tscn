@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Interface/VisionMode.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Interface/GUI.tscn" type="PackedScene" id=4]
 
 [node name="TemplateLevel" type="Node2D"]
 
@@ -40,3 +41,5 @@ current = true
 [node name="LockedDoors" type="Node" parent="."]
 
 [node name="Computers" type="Node" parent="."]
+
+[node name="GUI" parent="." instance=ExtResource( 4 )]

@@ -1,7 +1,6 @@
 extends "res://Characters/TemplateCharacter.gd"
 
 var motion = Vector2()
-var disguised = false
 
 const PLAYER_SPRITE = "res://GFX/PNG/Hitman 1/hitman1_stand.png"
 const PLAYER_LIGHT = "res://GFX/PNG/Hitman 1/hitman1_stand.png"
@@ -10,10 +9,22 @@ const BOX_LIGHT = "res://GFX/PNG/Tiles/tile_156.png"
 const PLAYER_OCCLUDER = "res://Characters/HumanOccluder.tres"
 const BOX_OCCLUDER = "res://Characters/BoxOccluder.tres"
 
+export var disguised_slowdown = 0.25
+export var disguised_duration = 5 
+var disguised = false
+var velocity_multiplier = 1
+
+func _ready():
+	$Timer.wait_time = disguised_duration
+	reveal()
 
 func _physics_process(delta):
 	update_movements()
-	move_and_slide(motion)
+	move_and_slide(motion * velocity_multiplier)
+	
+	if disguised:
+		$DisguiseLabel.text = str($Timer.time_left).pad_decimals(2)
+		$DisguiseLabel.rect_rotation = -rotation_degrees
 	
 func update_movements():
 	look_at(get_global_mouse_position())
@@ -48,6 +59,9 @@ func reveal():
 	$Sprite.texture = load(PLAYER_SPRITE)
 	$LightOccluder2D.occluder = load(PLAYER_OCCLUDER)
 	$Light2D.texture = load(PLAYER_SPRITE)
+	$DisguiseLabel.hide()
+
+	velocity_multiplier = 1
 	disguised = false
 	collision_layer = 1
 
@@ -55,5 +69,9 @@ func disguise():
 	$Sprite.texture = load(BOX_SPRITE)
 	$LightOccluder2D.occluder = load(BOX_OCCLUDER)
 	$Light2D.texture = load(BOX_SPRITE)
+	$DisguiseLabel.show()
+	
+	velocity_multiplier = disguised_slowdown
 	disguised = true
 	collision_layer = 16
+	$Timer.start()

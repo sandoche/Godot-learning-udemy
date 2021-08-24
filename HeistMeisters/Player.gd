@@ -10,7 +10,8 @@ const PLAYER_OCCLUDER = "res://Characters/HumanOccluder.tres"
 const BOX_OCCLUDER = "res://Characters/BoxOccluder.tres"
 
 export var disguised_slowdown = 0.25
-export var disguised_duration = 5 
+export var disguised_duration = 5
+export var number_of_disguises = 3
 var disguised = false
 var velocity_multiplier = 1
 
@@ -25,7 +26,7 @@ func _physics_process(delta):
 	if disguised:
 		$DisguiseLabel.text = str($Timer.time_left).pad_decimals(2)
 		$DisguiseLabel.rect_rotation = -rotation_degrees
-	
+			
 func update_movements():
 	look_at(get_global_mouse_position())
 	if Input.is_action_pressed("move_down") and not Input.is_action_pressed("move_up"):
@@ -52,7 +53,7 @@ func _input(event):
 func toggle_disguise():
 	if disguised:
 		reveal()
-	else:
+	elif number_of_disguises > 0:
 		disguise()
 
 func reveal():
@@ -71,6 +72,7 @@ func disguise():
 	$Light2D.texture = load(BOX_SPRITE)
 	$DisguiseLabel.show()
 	
+	number_of_disguises -= 1
 	velocity_multiplier = disguised_slowdown
 	disguised = true
 	collision_layer = 16

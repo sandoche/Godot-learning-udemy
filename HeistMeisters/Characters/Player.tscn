@@ -20,10 +20,11 @@ energy = 0.75
 one_shot = true
 
 [node name="DisguiseLabel" type="Label" parent="." index="5"]
-margin_left = 23.7473
-margin_top = -42.6
-margin_right = 91.7473
-margin_bottom = -15.6
+margin_left = 23.0
+margin_top = -42.0
+margin_right = 91.0
+margin_bottom = -15.0
+rect_pivot_offset = Vector2( -23, 42 )
 theme = ExtResource( 4 )
 text = "0.00"
 __meta__ = {

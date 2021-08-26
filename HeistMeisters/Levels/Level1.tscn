@@ -1,4 +1,4 @@
-[gd_scene load_steps=132 format=2]
+[gd_scene load_steps=133 format=2]
 
 [ext_resource path="res://Levels/TemplateLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Characters/NPCs/Camera.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Doors/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Doors/LockedDoor.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Computer/Computer.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Loot/Briefcase.tscn" type="PackedScene" id=8]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
@@ -987,6 +988,11 @@ tile_set = SubResource( 124 )
 cell_size = Vector2( 128, 128 )
 tile_data = PoolIntArray( -524291, 1073741831, 0, -589812, 6, 0, -458753, -1073741819, 0, -393217, -2147483644, 0, -327683, 6, 0, -327681, -2147483643, 0, -6, -1073741821, 0, -4, 6, 0, -65531, -1610612729, 0, 65530, -1610612733, 0, 5, -1610612729, 0, 65541, 6, 0, 65544, 6, 0, 262139, 1610612739, 0, 262140, 2, 0, 262141, 2, 0, 262142, 3, 0, 262144, 6, 0, 262153, 6, 0, 262154, 1610612739, 0, 262155, 1610612738, 0, 262156, 3, 0, 393211, 536870917, 0, 393212, 536870916, 0, 393213, 536870916, 0, 393214, 5, 0, 327691, 1, 0 )
 
+[node name="Player" parent="." index="1"]
+disguised_slowdown = 0.25
+disguised_duration = 5
+number_of_disguises = 3
+
 [node name="Camera" parent="Cameras" index="0" instance=ExtResource( 2 )]
 position = Vector2( 272, 609.415 )
 
@@ -999,6 +1005,9 @@ position = Vector2( 1039.82, 695.18 )
 
 [node name="Camera5" parent="Cameras" index="3" instance=ExtResource( 2 )]
 position = Vector2( 272, 609.415 )
+
+[node name="Briefcase" parent="Loot" index="0" instance=ExtResource( 8 )]
+position = Vector2( 1614.43, -823.32 )
 
 [node name="Guard" parent="Guards" index="0" instance=ExtResource( 3 )]
 position = Vector2( 1140.87, -32.3279 )

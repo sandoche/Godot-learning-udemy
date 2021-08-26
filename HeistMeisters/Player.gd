@@ -83,3 +83,7 @@ func disguise():
 func update_disguise_gui():
 	get_tree().call_group("DisguiseDisplay", "update_disguises", number_of_disguises)
 
+func collect_briefcase():
+	var loot = Node.new()
+	loot.set_name("Briefcase")
+	add_child(loot)

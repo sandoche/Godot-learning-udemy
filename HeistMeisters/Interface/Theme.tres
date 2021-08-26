@@ -10,6 +10,8 @@
 size = 18
 font_data = ExtResource( 4 )
 
+[sub_resource type="StyleBoxEmpty" id=2]
+
 [sub_resource type="StyleBoxEmpty" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=4]
@@ -20,14 +22,12 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="StyleBoxEmpty" id=7]
 
-[sub_resource type="StyleBoxEmpty" id=8]
-
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=8]
 size = 24
 font_data = ExtResource( 5 )
 
 [resource]
-default_font = SubResource( 2 )
+default_font = SubResource( 8 )
 Button/colors/font_color = Color( 0.0117647, 0.164706, 0.380392, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 Button/colors/font_color_hover = Color( 0.0117647, 0.164706, 0.380392, 1 )
@@ -47,12 +47,12 @@ ItemList/constants/icon_margin = 4
 ItemList/constants/line_separation = 2
 ItemList/constants/vseparation = 2
 ItemList/fonts/font = null
-ItemList/styles/bg = SubResource( 3 )
-ItemList/styles/bg_focus = SubResource( 4 )
-ItemList/styles/cursor = SubResource( 5 )
-ItemList/styles/cursor_unfocused = SubResource( 6 )
-ItemList/styles/selected = SubResource( 7 )
-ItemList/styles/selected_focus = SubResource( 8 )
+ItemList/styles/bg = SubResource( 2 )
+ItemList/styles/bg_focus = SubResource( 3 )
+ItemList/styles/cursor = SubResource( 4 )
+ItemList/styles/cursor_unfocused = SubResource( 5 )
+ItemList/styles/selected = SubResource( 6 )
+ItemList/styles/selected_focus = SubResource( 7 )
 Label/colors/font_color = Color( 1, 1, 1, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
 Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )

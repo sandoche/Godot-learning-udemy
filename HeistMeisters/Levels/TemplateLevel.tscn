@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Characters/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Interface/VisionMode.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Interface/GUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Exit/Exit.tscn" type="PackedScene" id=5]
 
 [node name="TemplateLevel" type="Node2D"]
 
@@ -45,3 +46,5 @@ current = true
 [node name="Computers" type="Node" parent="."]
 
 [node name="GUI" parent="." instance=ExtResource( 4 )]
+
+[node name="Exit" parent="." instance=ExtResource( 5 )]

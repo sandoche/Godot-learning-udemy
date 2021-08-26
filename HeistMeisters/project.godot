@@ -11,12 +11,13 @@ config_version=4
 [application]
 
 config/name="Heist Meisters"
-run/main_scene="res://Levels/Level1.tscn"
+run/main_scene="res://Lobby/Lobby.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 CombinationGenerator="*res://Doors/CombinationGenerator.gd"
+BackgroundMusic="*res://Music/BackgroundMusic.tscn"
 
 [global]
 
@@ -73,5 +74,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_clear_color=Color( 0.219608, 0.00784314, 0.00784314, 1 )
+environment/default_clear_color=Color( 0.0156863, 0.0117647, 0.141176, 1 )
 environment/default_environment="res://default_env.tres"

@@ -17,6 +17,7 @@ var velocity_multiplier = 1
 
 func _ready():
 	$Timer.wait_time = disguised_duration
+	update_disguise_gui()
 	reveal()
 
 func _physics_process(delta):
@@ -77,3 +78,8 @@ func disguise():
 	disguised = true
 	collision_layer = 16
 	$Timer.start()
+	update_disguise_gui()
+	
+func update_disguise_gui():
+	get_tree().call_group("DisguiseDisplay", "update_disguises", number_of_disguises)
+

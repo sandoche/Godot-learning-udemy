@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=2]
+[gd_scene load_steps=119 format=2]
 
 [ext_resource path="res://Levels/TemplateLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GFX/Tilesheet/tilesheet_complete_2X.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Levels/Tutorial.gd" type="Script" id=6]
 [ext_resource path="res://GFX/Interface/PNG/crossair_blueOutline.png" type="Texture" id=7]
 [ext_resource path="res://SFX/message.wav" type="AudioStream" id=8]
+[ext_resource path="res://Interface/TutorialGui.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Interface/MessageTemplate.tscn" type="PackedScene" id=10]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
@@ -730,6 +732,8 @@ extents = Vector2( 128, 128 )
 [node name="Tutorial" instance=ExtResource( 1 )]
 script = ExtResource( 6 )
 
+[node name="TutorialGui" parent="." index="0" instance=ExtResource( 9 )]
+
 [node name="TileMap" parent="Navigation2D" index="0"]
 tile_set = SubResource( 107 )
 tile_data = PoolIntArray( -589825, 4, 0, -655360, 4, 2, -655359, 4, 2, -655358, 4, 2, -655357, 4, 1, -524289, 4, 65538, -589824, 5, 0, -589823, 5, 0, -589822, 5, 0, -589821, 4, 65538, -458753, 4, 65538, -524288, 5, 0, -524287, 4, 65541, -524286, 5, 0, -524285, 4, 65538, -393217, 4, 65538, -458752, 5, 0, -458751, 4, 65538, -458750, 5, 0, -458749, 4, 65536, -458748, 4, 2, -458747, 4, 2, -458746, 4, 2, -458745, 4, 2, -458744, 4, 2, -458743, 4, 1, -327690, 4, 0, -327689, 4, 2, -327688, 4, 2, -327687, 4, 2, -327686, 4, 2, -327685, 4, 2, -327684, 4, 2, -327683, 4, 1, -327681, 4, 65538, -393216, 5, 0, -393215, 4, 65538, -393214, 5, 0, -393213, 5, 0, -393212, 5, 0, -393211, 5, 0, -393210, 5, 0, -393209, 5, 0, -393208, 5, 0, -393207, 4, 65538, -262154, 4, 65538, -262153, 5, 0, -262152, 5, 0, -262151, 5, 0, -262150, 5, 0, -262149, 5, 0, -262148, 5, 0, -262147, 4, 65536, -262146, 4, 2, -262145, 4, 65537, -327680, 5, 0, -327679, 4, 65538, -327678, 5, 0, -327677, 4, 0, -327676, 4, 2, -327675, 4, 2, -327674, 4, 2, -327673, 4, 1, -327672, 5, 0, -327671, 4, 65538, -196618, 4, 65538, -196617, 5, 0, -196616, 5, 2, -196615, 5, 4, -196614, 5, 2, -196613, 5, 0, -196612, 5, 0, -196611, 5, 0, -196610, 5, 0, -196609, 5, 0, -262144, 5, 0, -262143, 4, 65538, -262142, 5, 0, -262141, 4, 65538, -262140, 5, 0, -262139, 5, 0, -262138, 5, 0, -262137, 4, 65538, -262136, 5, 0, -262135, 4, 65538, -131082, 4, 65538, -131081, 5, 0, -131080, 5, 2, -131079, 5, 2, -131078, 5, 4, -131077, 5, 4, -131076, 5, 0, -131075, 4, 0, -131074, 4, 2, -131073, 4, 2, -196608, 4, 2, -196607, 4, 65540, -196606, 5, 0, -196605, 4, 6, -196604, 5, 0, -196603, 4, 0, -196602, 4, 2, -196601, 4, 65537, -196600, 5, 0, -196599, 4, 65538, -65546, 4, 65538, -65545, 5, 0, -65544, 5, 0, -65543, 5, 0, -65542, 5, 0, -65541, 5, 0, -65540, 5, 0, -65539, 4, 65538, -65538, 5, 0, -65537, 5, 0, -131072, 5, 0, -131071, 4, 65538, -131070, 5, 0, -131069, 5, 0, -131068, 5, 0, -131067, 4, 65538, -131066, 5, 0, -131065, 5, 0, -131064, 5, 0, -131063, 4, 65538, -10, 4, 65536, -9, 4, 2, -8, 4, 2, -7, 4, 2, -6, 4, 2, -5, 4, 2, -4, 4, 2, -3, 4, 65540, -2, 5, 0, -1, 5, 2, -65536, 5, 0, -65535, 4, 65536, -65534, 4, 2, -65533, 4, 2, -65532, 4, 2, -65531, 4, 65537, -65530, 5, 0, -65529, 4, 0, -65528, 4, 2, -65527, 4, 65537, 65533, 4, 65538, 65534, 5, 0, 65535, 5, 2, 0, 5, 0, 1, 5, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 4, 65538, 131069, 4, 65538, 131070, 5, 0, 131071, 5, 4, 65536, 5, 4, 65537, 5, 2, 65538, 5, 0, 65539, 5, 2, 65540, 5, 2, 65541, 5, 0, 65542, 5, 0, 65543, 4, 65538, 196605, 4, 65538, 196606, 5, 0, 196607, 5, 0, 131072, 5, 2, 131073, 5, 0, 131074, 5, 0, 131075, 5, 2, 131076, 5, 0, 131077, 5, 0, 131078, 5, 0, 131079, 4, 65538, 262141, 4, 65538, 262142, 5, 0, 262143, 5, 0, 196608, 5, 2, 196609, 5, 2, 196610, 5, 2, 196611, 5, 0, 196612, 5, 0, 196613, 5, 4, 196614, 5, 0, 196615, 4, 65538, 327677, 4, 65538, 327678, 5, 0, 327679, 5, 0, 262144, 5, 0, 262145, 5, 0, 262146, 5, 0, 262147, 5, 0, 262148, 5, 0, 262149, 5, 0, 262150, 5, 0, 262151, 4, 65538, 393213, 4, 65536, 393214, 4, 2, 393215, 4, 2, 327680, 4, 2, 327681, 4, 2, 327682, 4, 2, 327683, 4, 2, 327684, 4, 2, 327685, 4, 2, 327686, 4, 2, 327687, 4, 65537 )
@@ -737,13 +741,13 @@ tile_data = PoolIntArray( -589825, 4, 0, -655360, 4, 2, -655359, 4, 2, -655358, 
 [node name="Door" parent="Doors" index="0" instance=ExtResource( 4 )]
 position = Vector2( 63.5, -628 )
 
-[node name="Exit" parent="." index="10"]
+[node name="Exit" parent="." index="11"]
 margin_left = 469.864
 margin_top = 154.842
 margin_right = 669.864
 margin_bottom = 254.842
 
-[node name="Light2D" type="Light2D" parent="." index="11"]
+[node name="Light2D" type="Light2D" parent="." index="12"]
 position = Vector2( -1135.19, -627.441 )
 rotation = 0.360866
 scale = Vector2( 1.5, 1.5 )
@@ -755,7 +759,7 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Light2D2" type="Light2D" parent="." index="12"]
+[node name="Light2D2" type="Light2D" parent="." index="13"]
 position = Vector2( -1131.41, -138.591 )
 rotation = 5.84685
 scale = Vector2( 1.5, 1.5 )
@@ -767,10 +771,10 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Briefcase" parent="." index="13" instance=ExtResource( 5 )]
+[node name="Briefcase" parent="." index="14" instance=ExtResource( 5 )]
 position = Vector2( -66.7419, -66.7419 )
 
-[node name="Light2D3" type="Light2D" parent="." index="14"]
+[node name="Light2D3" type="Light2D" parent="." index="15"]
 position = Vector2( -251.75, 423.376 )
 rotation = 5.12004
 scale = Vector2( 1.5, 1.5 )
@@ -781,15 +785,16 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Light2D4" type="Light2D" parent="." index="15"]
+[node name="Light2D4" type="Light2D" parent="." index="16"]
 position = Vector2( 121.843, -390.194 )
 rotation = -2.08057
 texture = ExtResource( 3 )
 offset = Vector2( 300, 0 )
 energy = 0.5
 shadow_enabled = true
+shadow_item_cull_mask = 0
 
-[node name="ObjectiveAreas" type="Node" parent="." index="16"]
+[node name="ObjectiveAreas" type="Node" parent="." index="17"]
 
 [node name="MoveObjective" type="Area2D" parent="ObjectiveAreas" index="0"]
 position = Vector2( -253.097, -459.034 )
@@ -828,13 +833,13 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveAreas/BriefcaseObjective" index="0"]
 shape = SubResource( 108 )
 
-[node name="ObjectivePositions" type="Node" parent="." index="17"]
+[node name="ObjectivePositions" type="Node" parent="." index="18"]
 
 [node name="MoveObjective" type="Position2D" parent="ObjectivePositions" index="0"]
 position = Vector2( -122.735, -448.152 )
 
 [node name="DoorObjective" type="Position2D" parent="ObjectivePositions" index="1"]
-position = Vector2( 63.0564, -630.002 )
+position = Vector2( 62.5845, -691.354 )
 
 [node name="NightvisionObjective" type="Position2D" parent="ObjectivePositions" index="2"]
 position = Vector2( 830.656, 2.27173 )
@@ -845,7 +850,24 @@ position = Vector2( -78.2842, -52.6106 )
 [node name="ExitObjective" type="Position2D" parent="ObjectivePositions" index="4"]
 position = Vector2( 569.978, 230.156 )
 
-[node name="ObjectivePointer" type="Sprite" parent="." index="18"]
+[node name="ObjectiveMessages" type="Node" parent="." index="19"]
+
+[node name="WelcomeMessage" parent="ObjectiveMessages" index="0" instance=ExtResource( 10 )]
+message = "Welcome, Heist Meister to your first day of training, please proceed to the objectives markers using [Z] [Q] [S] [D] keys to move."
+
+[node name="DoorMessage" parent="ObjectiveMessages" index="1" instance=ExtResource( 10 )]
+message = "Excellent, now we'll practice interacting with the objects. Stand close to the door and left-click on it with the mouse."
+
+[node name="NightvisionMessage" parent="ObjectiveMessages" index="2" instance=ExtResource( 10 )]
+message = "You'll be working in the dark a lot so we provided you with a T.O.U.C.A.N. night vision module. Active or deactivate it with the [SPACE] key."
+
+[node name="LootMessage" parent="ObjectiveMessages" index="3" instance=ExtResource( 10 )]
+message = "Before you can leave you'll have to grab that suitcase."
+
+[node name="ExitMessage" parent="ObjectiveMessages" index="4" instance=ExtResource( 10 )]
+message = "The exit is unlocked, get to it!"
+
+[node name="ObjectivePointer" type="Sprite" parent="." index="20"]
 position = Vector2( -564.14, -400.437 )
 scale = Vector2( 2, 2 )
 z_index = 2
@@ -857,11 +879,11 @@ __meta__ = {
 [node name="Light2D" type="Light2D" parent="ObjectivePointer" index="0"]
 texture = ExtResource( 7 )
 
-[node name="Tween" type="Tween" parent="." index="19"]
+[node name="Tween" type="Tween" parent="." index="21"]
 
-[node name="MessageSound" type="AudioStreamPlayer" parent="." index="20"]
+[node name="MessageSound" type="AudioStreamPlayer" parent="." index="22"]
 stream = ExtResource( 8 )
-volume_db = -5.0
+volume_db = -10.0
 
 [connection signal="body_entered" from="ObjectiveAreas/MoveObjective" to="." method="_on_MoveObjective_body_entered"]
 [connection signal="body_entered" from="ObjectiveAreas/DoorObjective" to="." method="_on_DoorObjective_body_entered"]

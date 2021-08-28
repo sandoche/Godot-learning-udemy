@@ -97,5 +97,6 @@ text = "OK"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="text_entered" from="VBoxContainer/HBoxContainer/PlayerText" to="." method="_on_PlayerText_text_entered"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]

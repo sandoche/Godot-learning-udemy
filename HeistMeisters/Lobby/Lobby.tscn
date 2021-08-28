@@ -51,7 +51,7 @@ margin_left = 12.0
 margin_top = 30.0
 margin_right = -12.0
 margin_bottom = -12.0
-custom_constants/separation = 20
+custom_constants/separation = 11
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,9 +64,9 @@ text = "Welcome to"
 align = 1
 
 [node name="Split2" type="HBoxContainer" parent="CenterContainer/Background/VBoxContainer"]
-margin_top = 47.0
+margin_top = 38.0
 margin_right = 376.0
-margin_bottom = 57.0
+margin_bottom = 48.0
 custom_constants/separation = 0
 alignment = 1
 
@@ -95,9 +95,9 @@ texture = ExtResource( 6 )
 expand = true
 
 [node name="Label2" type="Label" parent="CenterContainer/Background/VBoxContainer"]
-margin_top = 77.0
+margin_top = 59.0
 margin_right = 376.0
-margin_bottom = 188.0
+margin_bottom = 170.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Heist
@@ -105,9 +105,9 @@ Meisters"
 align = 1
 
 [node name="Split" type="HBoxContainer" parent="CenterContainer/Background/VBoxContainer"]
-margin_top = 208.0
+margin_top = 181.0
 margin_right = 376.0
-margin_bottom = 218.0
+margin_bottom = 191.0
 custom_constants/separation = 0
 alignment = 1
 
@@ -136,14 +136,14 @@ texture = ExtResource( 6 )
 expand = true
 
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Background/VBoxContainer"]
-margin_top = 238.0
+margin_top = 202.0
 margin_right = 376.0
-margin_bottom = 332.0
+margin_bottom = 348.0
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer/Background/VBoxContainer/CenterContainer"]
 margin_left = 47.0
 margin_right = 328.0
-margin_bottom = 94.0
+margin_bottom = 146.0
 custom_constants/vseparation = 10
 custom_constants/hseparation = 11
 columns = 2
@@ -161,7 +161,7 @@ margin_bottom = 34.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Start mission"
 
-[node name="QuitButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
+[node name="TutorialButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
 margin_top = 52.0
 margin_right = 42.0
 margin_bottom = 94.0
@@ -173,7 +173,22 @@ margin_top = 59.0
 margin_right = 281.0
 margin_bottom = 86.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Tutorial"
+
+[node name="QuitButton2" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
+margin_top = 104.0
+margin_right = 42.0
+margin_bottom = 146.0
+rect_min_size = Vector2( 42, 42 )
+
+[node name="Label3" type="Label" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
+margin_left = 53.0
+margin_top = 111.0
+margin_right = 281.0
+margin_bottom = 138.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Quit game"
 
 [connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/TutorialButton" to="." method="_on_TutorialButton_pressed"]
+[connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/QuitButton2" to="." method="_on_QuitButton_pressed"]

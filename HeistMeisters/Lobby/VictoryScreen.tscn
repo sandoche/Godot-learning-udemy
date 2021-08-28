@@ -11,13 +11,5 @@ text = "HEIST MEISTERS"
 text = "YOU
 WON"
 
-[node name="GridContainer" parent="CenterContainer/Background/VBoxContainer/CenterContainer" index="0"]
-margin_left = 74.0
-margin_right = 301.0
-
 [node name="Label" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer" index="1"]
-margin_right = 227.0
-text = "Play again"
-
-[node name="Label2" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer" index="3"]
-margin_right = 227.0
+text = "START MISSION"

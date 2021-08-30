@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/frogblock03.wav-66b852d3c2b8a0c54e29c9464128ee85.sample"
+
+[deps]
+
+source_file="res://SFX/frogblock03.wav"
+dest_files=[ "res://.import/frogblock03.wav-66b852d3c2b8a0c54e29c9464128ee85.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

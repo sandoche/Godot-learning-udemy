@@ -88,4 +88,48 @@ __meta__ = {
 [node name="CollisionShape" type="CollisionShape" parent="Boundaries/Rightwall"]
 shape = SubResource( 2 )
 
+[node name="Backwall2" type="StaticBody" parent="Boundaries"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -6 )
+collision_layer = 2
+collision_mask = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Boundaries/Backwall2"]
+shape = SubResource( 2 )
+
+[node name="Frontwall2" type="StaticBody" parent="Boundaries"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 6 )
+collision_layer = 2
+collision_mask = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Boundaries/Frontwall2"]
+shape = SubResource( 2 )
+
+[node name="Leftwall2" type="StaticBody" parent="Boundaries"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.5, 5, 0 )
+collision_layer = 2
+collision_mask = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Boundaries/Leftwall2"]
+shape = SubResource( 2 )
+
+[node name="Rightwall2" type="StaticBody" parent="Boundaries"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.5, 5, 0 )
+collision_layer = 2
+collision_mask = 4
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Boundaries/Rightwall2"]
+shape = SubResource( 2 )
+
 [editable path="Goals/Goal2"]

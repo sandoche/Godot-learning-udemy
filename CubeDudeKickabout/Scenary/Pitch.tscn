@@ -13,6 +13,8 @@ size = Vector2( 22, 16 )
 extents = Vector3( 11, 0.1, 8 )
 
 [node name="Pitch" type="StaticBody"]
+collision_layer = 2
+collision_mask = 7
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 2 )

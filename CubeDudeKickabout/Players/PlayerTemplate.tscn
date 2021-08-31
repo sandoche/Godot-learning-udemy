@@ -269,6 +269,7 @@ tracks/16/keys = PoolRealArray( 0, 1, 3.18323e-11, -3.63798e-12, 5.96046e-08, -7
 radius = 0.5
 
 [node name="PlayerTemplate" type="KinematicBody"]
+collision_mask = 7
 script = ExtResource( 2 )
 
 [node name="Armature" type="Spatial" parent="."]

@@ -65,6 +65,13 @@ down_2={
  ]
 }
 
+[layer_names]
+
+3d_physics/layer_1="Player"
+3d_physics/layer_2="Level"
+3d_physics/layer_3="Ball"
+3d_physics/layer_4="Net"
+
 [physics]
 
 common/enable_pause_aware_picking=true

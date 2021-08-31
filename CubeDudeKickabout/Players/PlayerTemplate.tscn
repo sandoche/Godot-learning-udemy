@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Models/Cubedude/CubeDube.material" type="Material" id=1]
+[ext_resource path="res://Players/Player.gd" type="Script" id=2]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "CubeDude"
@@ -268,6 +269,7 @@ tracks/16/keys = PoolRealArray( 0, 1, 3.18323e-11, -3.63798e-12, 5.96046e-08, -7
 radius = 0.5
 
 [node name="PlayerTemplate" type="KinematicBody"]
+script = ExtResource( 2 )
 
 [node name="Armature" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.818627, 0 )

@@ -16,7 +16,8 @@ transform = Transform( 1, 0, 0, 0, 0.899138, 0.437665, 0, -0.437665, 0.899138, 0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.20702, 0 )
 
 [node name="Player1" parent="." instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.40425, 0, 0 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, 0 )
 
 [node name="Player2" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2.73699, 0, 0 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3, 0, 0 )
+player_id = 2

@@ -1,16 +1,17 @@
 extends KinematicBody
 
+var motion = Vector3()
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export var player_id = 1
 
+const SPEED = 10
+const UP = Vector3(0, 1, 0)
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _physics_process(delta):
+	move()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func move():
+	var x = Input.get_action_strength("right_%s" % player_id) - Input.get_action_strength("left_%s" % player_id)
+	var z = Input.get_action_strength("down_%s" % player_id) - Input.get_action_strength("up_%s" % player_id)
+	motion = Vector3(x, 0, z)
+	move_and_slide(motion.normalized() * SPEED, UP)

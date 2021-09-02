@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Robot.escn-de6768d15e452faf135dac4bcbeb9745.scn"
+path="res://.import/Animated Woman.glb-5e9bc3bd547e037a0330e8807120f913.scn"
 
 [deps]
 
-source_file="res://Models/Robot/Robot.escn"
-dest_files=[ "res://.import/Robot.escn-de6768d15e452faf135dac4bcbeb9745.scn" ]
+source_file="res://Models/Players/Animated Woman.glb"
+dest_files=[ "res://.import/Animated Woman.glb-5e9bc3bd547e037a0330e8807120f913.scn" ]
 
 [params]
 
@@ -16,7 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
-nodes/use_legacy_names=true
+nodes/use_legacy_names=false
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true

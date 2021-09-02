@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scenary/Pitch.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Ball/Ball.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenary/Decor/Cube_010.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Models/toys/Bear/bear.dae" type="PackedScene" id=13]
 [ext_resource path="res://GFX/picture.png" type="Texture" id=14]
+[ext_resource path="res://SFX/airhorn.ogg" type="AudioStream" id=15]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0, 0.321569, 1, 1 )
@@ -181,7 +182,7 @@ __meta__ = {
 shape = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 one_shot = true
 
 [node name="GUI" parent="." instance=ExtResource( 7 )]
@@ -220,6 +221,9 @@ transform = Transform( -1.62354, 0, 1.16796, 0, 2, 0, -1.16796, 0, -1.62354, 4.4
 transform = Transform( 0.989011, 6.46246e-09, 0.147844, 0.147844, -4.3231e-08, -0.989011, 0, 1, -4.37114e-08, -5, 5.95902, -14 )
 mesh = SubResource( 8 )
 material/0 = null
+
+[node name="Airhorn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
 
 [connection signal="body_entered" from="Goals/Goal1/GoalDetector" to="." method="_on_GoalDetector_body_entered" binds= [ 2 ]]
 [connection signal="body_entered" from="Goals/Goal2/GoalDetector" to="." method="_on_GoalDetector_body_entered" binds= [ 1 ]]

@@ -11,7 +11,7 @@ func reset():
 	axis_lock_linear_y = false
 	axis_lock_linear_z = false
 	
-func freeze():
+func freeze(id):
 	axis_lock_linear_x = true
 	axis_lock_linear_y = true
 	axis_lock_linear_z = true

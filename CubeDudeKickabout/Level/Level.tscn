@@ -241,7 +241,7 @@ transform = Transform( 0.615661, 0, -0.788011, 0, 1, 0, 0.788011, 0, 0.615661, -
 transform = Transform( -1.62354, 0, 1.16796, 0, 2, 0, -1.16796, 0, -1.62354, 4.40676, 0, -12.6036 )
 
 [node name="Picture" type="MeshInstance" parent="Decor"]
-transform = Transform( 0.989011, 6.46246e-09, 0.147844, 0.147844, -4.3231e-08, -0.989011, 0, 1, -4.37114e-08, -5, 5.95902, -14 )
+transform = Transform( 0.989011, 6.46246e-09, 0.147844, 0.147844, -4.3231e-08, -0.989011, 0, 1, -4.37114e-08, -5, 5.8, -14.9 )
 mesh = SubResource( 8 )
 material/0 = null
 

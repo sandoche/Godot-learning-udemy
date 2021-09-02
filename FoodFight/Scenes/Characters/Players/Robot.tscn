@@ -1,0 +1,102 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Models/Robot/Robot.escn" type="PackedScene" id=1]
+
+[node name="Robot" instance=ExtResource( 1 )]
+
+[node name="AnimationPlayer" parent="RobotArmature" index="0"]
+
+autoplay = "Robot_Running"
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="BoneAttachment" parent="RobotArmature" index="1"]
+
+transform = Transform( 0.0367199, 0.903648, -0.426698, -0.175172, 0.426195, 0.887508, 0.983851, 0.0421566, 0.173944, 0.617283, 2.33039, -0.0168435 )
+
+[node name="ArmL" parent="RobotArmature/BoneAttachment" index="0"]
+
+transform = Transform( -0.0656895, 0.0525771, 0.996453, 0.10077, 0.993855, -0.0457968, -0.992739, 0.0974038, -0.0705838, 0.0400112, -0.163376, 0.617577 )
+_sections_unfolded = [ "material" ]
+
+[node name="BoneAttachment001" parent="RobotArmature" index="2"]
+
+transform = Transform( 0.209987, -0.874529, 0.437155, -0.256282, 0.382255, 0.887806, -0.943515, -0.298463, -0.143858, -0.681735, 2.31525, -0.0168434 )
+
+[node name="ArmR" parent="RobotArmature/BoneAttachment001" index="0"]
+
+transform = Transform( -0.00118008, -0.0644651, -0.217693, -0.0438732, 0.213657, -0.0630322, 0.222757, 0.0417393, -0.0135677, -0.0229083, 0.00509381, -0.409791 )
+
+[node name="BoneAttachment002" parent="RobotArmature" index="3"]
+
+transform = Transform( -1, 2.15749e-007, -2.93496e-007, 2.0612e-007, 0.999474, 0.0324216, 3.00337e-007, 0.0324217, -0.999474, 0.633527, 0.024694, -0.138034 )
+
+[node name="BoneAttachment003" parent="RobotArmature" index="4"]
+
+transform = Transform( -1, 1.64626e-006, -2.93497e-007, 1.63588e-006, 0.999474, 0.0324217, 3.46717e-007, 0.0324215, -0.999475, -0.640076, 0.024694, -0.138034 )
+
+[node name="BoneAttachment004" parent="RobotArmature" index="7"]
+
+transform = Transform( 0.997931, -0.0397531, 0.0505244, 0.0520549, 0.0384579, -0.997901, 0.0377267, 0.998467, 0.0404482, -0.0171258, 3.00551, -0.0112471 )
+
+[node name="Head" parent="RobotArmature/BoneAttachment004" index="0"]
+
+transform = Transform( 0.999996, 0.00280534, 0.000109062, -5.63674e-005, -0.0187638, 0.999824, 0.00280694, -0.99982, -0.0187636, 0.0406179, 0.0670674, -0.335165 )
+
+[node name="BoneAttachment005" parent="RobotArmature" index="8"]
+
+transform = Transform( 0.985174, -0.160987, -0.0593365, 0.0100382, -0.291196, 0.956646, -0.171268, -0.943112, -0.285249, 0.630296, 1.50432, -0.0698894 )
+
+[node name="LegL" parent="RobotArmature/BoneAttachment005" index="0"]
+
+transform = Transform( 0.999981, 0.00199891, 0.00578755, 0.0060775, -0.209273, -0.977831, -0.000743445, 0.977856, -0.209281, -0.00647306, 0.187741, -0.616836 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BoneAttachment006" parent="RobotArmature" index="9"]
+
+transform = Transform( 0.960963, 0.26153, 0.0903303, -0.0106343, -0.291359, 0.956581, 0.276464, -0.920273, -0.277186, -0.643307, 1.50431, -0.0698896 )
+
+[node name="LegR" parent="RobotArmature/BoneAttachment006" index="0"]
+
+transform = Transform( 0.999981, 0.001871, 0.00586677, 0.00610587, -0.177769, -0.984027, -0.000798233, 0.984071, -0.177774, 0.00647932, 0.177481, -0.582784 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BoneAttachment007" parent="RobotArmature" index="10"]
+
+transform = Transform( 0.985174, -0.167832, 0.0355964, 0.0100384, 0.263461, 0.964697, -0.171268, -0.949981, 0.261306, 0.666551, 0.919799, 0.1044 )
+
+[node name="LowerLegL" parent="RobotArmature/BoneAttachment007" index="0"]
+
+transform = Transform( 0.999981, 0.00199893, 0.00578763, 0.00530049, 0.190558, -0.981655, -0.00306512, 0.981674, 0.19054, -0.00611609, -0.160538, -0.587648 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BoneAttachment008" parent="RobotArmature" index="11"]
+
+transform = Transform( 0.960962, 0.269414, -0.0629734, -0.0106344, 0.263331, 0.964737, 0.276463, -0.926342, 0.256004, -0.698499, 0.919837, 0.0994732 )
+
+[node name="LowerLegR" parent="RobotArmature/BoneAttachment008" index="0"]
+
+transform = Transform( 0.999981, 0.0018711, 0.00586647, 0.00540191, 0.190626, -0.981623, -0.002955, 0.981662, 0.1906, 0.00647932, -0.160471, -0.587657 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BoneAttachment009" parent="RobotArmature" index="12"]
+
+transform = Transform( -0.911603, -1.73064e-006, -0.411072, -0.411072, -1.51247e-006, 0.911602, -2.30223e-006, 0.999998, 8.79169e-007, 0.582738, 2.407, -0.0168434 )
+
+[node name="ShoulderL" parent="RobotArmature/BoneAttachment009" index="0"]
+
+transform = Transform( -0.0259367, 0.999664, 4.36962e-008, -5.68434e-013, -4.37119e-008, 1, 0.999664, 0.0259367, 1.13371e-009, 0.0627744, -0.0193458, -0.139209 )
+_sections_unfolded = [ "Transform", "material" ]
+
+[node name="BoneAttachment010" parent="RobotArmature" index="13"]
+
+transform = Transform( -0.898185, -1.32173e-006, 0.439616, 0.439616, -4.24683e-007, 0.898185, -1.3113e-006, 0.999999, 3.27826e-007, -0.636816, 2.40703, -0.0168434 )
+
+[node name="ShoulderR" parent="RobotArmature/BoneAttachment010" index="0"]
+
+transform = Transform( -0.00985801, 0.999951, -1.1798e-006, -2.69271e-007, 1.21966e-006, 1, 0.999952, 0.0098581, 2.583e-007, -0.118316, -0.00415106, -0.0949789 )
+
+[node name="BoneAttachment011" parent="RobotArmature" index="14"]
+
+transform = Transform( 1, 7.15256e-007, -5.82075e-011, -5.82076e-011, 0, -0.999999, -7.15256e-007, 1, 4.16333e-017, 0.00205059, 1.40809, 0.112672 )
+
+

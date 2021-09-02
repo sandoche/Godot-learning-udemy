@@ -9,11 +9,11 @@ albedo_color = Color( 1, 0.796078, 0, 1 )
 
 [sub_resource type="SphereMesh" id=2]
 material = SubResource( 1 )
-radius = 0.5
-height = 1.0
+radius = 0.25
+height = 0.5
 
 [sub_resource type="SphereShape" id=3]
-radius = 0.5
+radius = 0.25
 
 [node name="Ball" type="RigidBody"]
 collision_layer = 4

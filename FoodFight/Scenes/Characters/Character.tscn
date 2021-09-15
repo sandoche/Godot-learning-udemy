@@ -4,7 +4,8 @@
 size = Vector3( 0.5, 2, 0.5 )
 
 [sub_resource type="CapsuleShape" id=2]
-radius = 0.5
+radius = 0.25
+height = 1.5
 
 [node name="Character" type="KinematicBody"]
 

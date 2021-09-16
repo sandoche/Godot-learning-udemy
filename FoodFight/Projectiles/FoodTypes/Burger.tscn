@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Ammo/models/Burger.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Projectiles/ProjectileTemplate.tscn" type="PackedScene" id=2]
+
+[node name="Burger" instance=ExtResource( 2 )]
+
+[node name="MeshInstance" parent="." index="0"]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0 )
+mesh = ExtResource( 1 )

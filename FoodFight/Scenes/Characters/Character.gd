@@ -1,9 +1,16 @@
 extends KinematicBody
 
+var food_types = {}
+
 const PROJECTILE_SPEED = 50
 
+func _ready():
+	food_types = file_grabber.get_files("res://Projectiles/FoodTypes/")
+	randomize()
+
 func fire():
-	var projectile = load("res://Projectiles/ProjectileTemplate.tscn").instance()
+	var random_food = food_types[randi() % food_types.size()]
+	var projectile = load(random_food).instance()
 	add_child(projectile)
 	projectile.set_as_toplevel(true)
 	projectile.global_transform = $Forward.global_transform

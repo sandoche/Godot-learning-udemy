@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Ammo/models/Cupcake.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Projectiles/ProjectileTemplate.tscn" type="PackedScene" id=2]
+
+[node name="Cupcake" instance=ExtResource( 2 )]
+
+[node name="MeshInstance" parent="." index="0"]
+transform = Transform( 0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -0.131332, 0 )
+mesh = ExtResource( 1 )

@@ -1,7 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=1]
-[ext_resource path="res://default_env.tres" type="Environment" id=2]
 [ext_resource path="res://Models/Furniture/deskCorner.mesh" type="ArrayMesh" id=3]
 [ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=4]
 
@@ -46,10 +45,6 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Floor/StaticBody"]
 shape = SubResource( 1 )
-
-[node name="Camera" type="Camera" parent="."]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24, 3, 0 )
-environment = ExtResource( 2 )
 
 [node name="Furniture" type="Node" parent="."]
 

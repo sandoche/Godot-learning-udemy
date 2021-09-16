@@ -35,7 +35,7 @@ func move():
 		face_forward(x,z)
 	
 func face_forward(x,z):
-	rotation.y = atan2(x,z) - PI * 2
+	$Armature.rotation.y = atan2(x,z) - PI/2
 
 func animate():
 	if (motion * SPEED).length() > MIN_BLEND_SPEED:

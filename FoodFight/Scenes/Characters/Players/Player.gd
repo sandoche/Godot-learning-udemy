@@ -25,17 +25,33 @@ func _input(event):
 		$Camera.rotation = v_camera_rotation(-event.relative.y/mouse_sensitivity)
 	
 func move():
-	var x = Input.get_action_strength("forward") - Input.get_action_strength("back")
-	var z = Input.get_action_strength("right") - Input.get_action_strength("left")
+	var movement_direction = get_2d_movement_direction()
+	var direction = Vector3.ZERO
+	var camera_xform = $Camera.global_transform
 	
-	motion = Vector3(x, 0, z)
+	direction -= camera_xform.basis.z.normalized() * movement_direction.x
+	direction += camera_xform.basis.x.normalized() * movement_direction.y
+	
+	direction.y = 0
+	
+	motion = direction
+	
 	move_and_slide(motion * SPEED, UP)
-
-	if not motion == Vector3(0,0,0):
-		face_forward(x,z)
 	
-func face_forward(x,z):
-	$Armature.rotation.y = atan2(x,z) - PI/2
+func get_2d_movement_direction():
+	var x = Input.get_action_strength("forward") - Input.get_action_strength("back")
+	var y = Input.get_action_strength("right") - Input.get_action_strength("left")
+	
+	var movement_direction = Vector2(x,y)
+	
+	if not movement_direction == Vector2.ZERO:
+		face_forward(x,y)
+		
+	return movement_direction.normalized()
+		
+
+func face_forward(x,y):
+	$Armature.rotation.y = atan2(x,y) - PI/2
 
 func animate():
 	if (motion * SPEED).length() > MIN_BLEND_SPEED:

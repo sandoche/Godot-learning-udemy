@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Models/Architecture/wall.mesh" type="ArrayMesh" id=1]
+
+[sub_resource type="ConcavePolygonShape" id=1]
+data = PoolVector3Array( 0, 0, 0.25, 0, 0, 0, -5, 0, 0.25, -5, 0, 0, -5, 0, 0.25, 0, 0, 0, 0, 6.4453, 0, 0, 6.4453, 0.25, -5, 6.4453, 0, -5, 6.4453, 0.25, -5, 6.4453, 0, 0, 6.4453, 0.25, 0, 6.4453, 0, 0, 0, 0, 0, 6.4453, 0.25, 0, 0, 0.25, 0, 6.4453, 0.25, 0, 0, 0, -5, 0, 0, -5, 6.4453, 0, -5, 0, 0.25, -5, 6.4453, 0.25, -5, 0, 0.25, -5, 6.4453, 0, -5, 0, 0, 0, 0, 0, -5, 6.4453, 0, 0, 6.4453, 0, -5, 6.4453, 0, 0, 0, 0, 0, 0, 0.25, -5, 0, 0.25, 0, 6.4453, 0.25, -5, 6.4453, 0.25, 0, 6.4453, 0.25, -5, 0, 0.25 )
+
+[node name="Wall" type="MeshInstance"]
+transform = Transform( 0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 7.8665, 0.25, -2.99337 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 1 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Level/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Architecture/DoorwayWide.tscn" type="PackedScene" id=2]
@@ -7,6 +7,12 @@
 [ext_resource path="res://Architecture/WindowSlide.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Bystanders/BystanderSpawner.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Characters/Robot/Robot.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Furniture/KitchenCabinet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Furniture/KitchenFridge.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Furniture/KitchenCabinetCorner.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Furniture/KitchenStove.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Furniture/KitchenCabinetDrawer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Furniture/KitchenSink.tscn" type="PackedScene" id=13]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Movement"
@@ -145,6 +151,33 @@ transform = Transform( 1, 7.15256e-07, 0, 0, 0, -1, -7.15256e-07, 1, 0, 0.002050
 [node name="TranslationAnimation" parent="Robots/Robot2" index="6"]
 autoplay = "Movement"
 anims/Movement = SubResource( 2 )
+
+[node name="KitchenCabinet" parent="Furniture" index="0" instance=ExtResource( 8 )]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -17.6016, 0.4, 2.52027 )
+
+[node name="KitchenCabinetCorner" parent="Furniture" index="1" instance=ExtResource( 10 )]
+transform = Transform( -3.27835e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.27835e-08, -11.0912, 0.4, 2.81528 )
+
+[node name="KitchenCabinetDrawer" parent="Furniture" index="2" instance=ExtResource( 12 )]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -15.9913, 0.4, 2.51326 )
+
+[node name="KitchenFridge" parent="Furniture" index="3" instance=ExtResource( 9 )]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -14.3965, 0.4, 3.07861 )
+
+[node name="KitchenSink" parent="Furniture" index="4" instance=ExtResource( 13 )]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -12.6717, 0.399999, 2.46804 )
+
+[node name="KitchenStove" parent="Furniture" index="5" instance=ExtResource( 11 )]
+transform = Transform( 0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, -11.1309, 0.4, 2.45546 )
+
+[node name="KitchenCabinetDrawer2" parent="Furniture" index="6" instance=ExtResource( 12 )]
+transform = Transform( -3.27835e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.27835e-08, -11.047, 0.4, 1.20334 )
+
+[node name="KitchenCabinetDrawer3" parent="Furniture" index="7" instance=ExtResource( 12 )]
+transform = Transform( -3.27835e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.27835e-08, -11.047, 0.4, -0.374528 )
+
+[node name="KitchenCabinetDrawer4" parent="Furniture" index="8" instance=ExtResource( 12 )]
+transform = Transform( -3.27835e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.27835e-08, -11.047, 0.4, -1.93983 )
 
 [node name="BystanderSpawner" parent="Spawners" index="0" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.304, -23 )
@@ -446,7 +479,7 @@ collision_mask = 2
 shape = SubResource( 3 )
 
 [node name="Player" parent="." index="7"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0.281923, -2 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0.281923, -4.51246 )
 
 [editable path="Robots/Robot"]
 [editable path="Robots/Robot/RobotArmature"]

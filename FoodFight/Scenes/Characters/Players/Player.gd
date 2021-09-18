@@ -12,6 +12,10 @@ const MIN_BLEND_SPEED = 0.125 # minimum movement threshold before we start the a
 const BLEND_TO_RUN = 0.075
 const BLEND_TO_IDLE = 0.1
 
+export var max_ammo = 5
+var ammo = 0
+var can_refill = false
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -73,3 +77,35 @@ func v_camera_rotation(camera_rotation):
 	var rotation = $Camera.rotation + Vector3(camera_rotation, 0, 0) 
 	rotation.x = clamp(rotation.x, PI/-8, PI/8)
 	return rotation
+
+func _on_RefillTimer_timeout():
+	ammo += 1
+	update_GUI()
+	if check_ammo():
+		$RefillTimer.start()
+	
+func check_ammo():
+	if ammo < max_ammo:
+		return true
+
+func RefillArea_entered():
+	if check_ammo():
+		$RefillTimer.start()
+		can_refill = true
+		$Harp.play()
+
+func RefillArea_exited():
+	$RefillTimer.stop()
+	can_refill = false
+	$Harp.stop()
+	
+func update_GUI():
+	get_node("../GUI/Ammo/Label").text = str(ammo)
+	
+func try_to_fire():
+	if can_fire and ammo > 0:
+		fire()
+		can_fire = false
+		$Timer.start()
+		ammo = clamp(ammo - 1, 0, max_ammo)
+		update_GUI()

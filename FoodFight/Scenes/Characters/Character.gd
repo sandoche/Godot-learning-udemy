@@ -24,7 +24,6 @@ func fire():
 	projectile.global_transform = $Forward.global_transform
 	var character_forward = global_transform.basis[2].normalized()
 	projectile.linear_velocity = character_forward * PROJECTILE_SPEED
-
-
+	
 func _on_Timer_timeout():
 	can_fire = true

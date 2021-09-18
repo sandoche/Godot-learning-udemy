@@ -24,7 +24,7 @@ func _input(event):
 		rotation = h_camera_rotation(-event.relative.x/mouse_sensitivity)
 		$Camera.rotation = v_camera_rotation(-event.relative.y/mouse_sensitivity)
 	if Input.is_action_just_pressed("fire"):
-		fire()
+		try_to_fire()
 	
 func move():
 	var movement_direction = get_2d_movement_direction()

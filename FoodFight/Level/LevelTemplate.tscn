@@ -20,6 +20,8 @@ material/0 = null
 [node name="CollisionShape" type="CollisionShape" parent="Floor/StaticBody"]
 shape = SubResource( 1 )
 
+[node name="Robots" type="Node" parent="."]
+
 [node name="Furniture" type="Node" parent="."]
 
 [node name="Lightning" type="Node" parent="."]

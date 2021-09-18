@@ -5,12 +5,15 @@ const UP = Vector3(0,1,0)
 
 var motion = Vector3()
 var movement_state = 0 # idle is 0, run is 1
+var action_state = 0 # -1 is throw, 0 is move / idle, +1 is reload
 
 var mouse_sensitivity = 500
 
 const MIN_BLEND_SPEED = 0.125 # minimum movement threshold before we start the animation
 const BLEND_TO_RUN = 0.075
 const BLEND_TO_IDLE = 0.1
+const RELOAD_BLEND_AMOUNT = 0.1
+const ACTION_RESET_RATE = 0.05
 
 export var max_ammo = 5
 var ammo = 0
@@ -68,7 +71,14 @@ func animate():
 	movement_state = clamp(movement_state, 0, 1)
 	var animation = $Armature/AnimationTree
 	
+	if can_refill:
+		action_state += RELOAD_BLEND_AMOUNT
+	
+	action_state = clamp(action_state, -1, 1)
+	action_state = lerp(action_state, 0, ACTION_RESET_RATE)
+	
 	animation["parameters/Move/blend_amount"] = movement_state
+	animation["parameters/Action/blend_amount"] = action_state
 
 func h_camera_rotation(camera_rotation):
 	return rotation + Vector3(0, camera_rotation, 0) 
@@ -109,3 +119,4 @@ func try_to_fire():
 		$Timer.start()
 		ammo = clamp(ammo - 1, 0, max_ammo)
 		update_GUI()
+		action_state = -1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Level/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Architecture/DoorwayWide.tscn" type="PackedScene" id=2]
@@ -7,12 +7,16 @@
 [ext_resource path="res://Architecture/WindowSlide.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Bystanders/BystanderSpawner.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Characters/Robot/Robot.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Furniture/KitchenCabinet.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Furniture/KitchenFridge.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Furniture/KitchenCabinetCorner.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Furniture/KitchenStove.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Furniture/KitchenCabinetDrawer.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Furniture/KitchenSink.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Furniture/StaticFurniture/KitchenCabinet.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Furniture/StaticFurniture/KitchenFridge.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Furniture/StaticFurniture/KitchenCabinetCorner.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Furniture/StaticFurniture/KitchenStove.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Furniture/StaticFurniture/KitchenCabinetDrawer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Furniture/StaticFurniture/KitchenSink.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Furniture/Microwave.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Furniture/CushionChair.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Furniture/Table.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Furniture/Plant.tscn" type="PackedScene" id=17]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Movement"
@@ -56,6 +60,22 @@ extents = Vector3( 0.001, 4, 8 )
 
 [node name="Robot" parent="Robots" index="0" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0.343, -8 )
+
+[node name="RobotArmature" parent="Robots/Robot" index="4"]
+bones/1/bound_children = [  ]
+bones/2/bound_children = [  ]
+bones/7/bound_children = [  ]
+bones/8/bound_children = [  ]
+bones/9/bound_children = [  ]
+bones/10/bound_children = [  ]
+bones/22/bound_children = [  ]
+bones/23/bound_children = [  ]
+bones/24/bound_children = [  ]
+bones/37/bound_children = [  ]
+bones/38/bound_children = [  ]
+bones/39/bound_children = [  ]
+bones/41/bound_children = [  ]
+bones/42/bound_children = [  ]
 
 [node name="BoneAttachment" parent="Robots/Robot/RobotArmature" index="1"]
 transform = Transform( -0.0564262, 0.0120857, -0.998333, 0.0680234, 0.99765, 0.00823249, 0.996087, -0.0674447, -0.0571156, 0.666745, 2.43728, -0.0168432 )
@@ -105,6 +125,22 @@ anims/Movement = SubResource( 1 )
 
 [node name="Robot2" parent="Robots" index="1" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0.343, 2.80454 )
+
+[node name="RobotArmature" parent="Robots/Robot2" index="4"]
+bones/1/bound_children = [  ]
+bones/2/bound_children = [  ]
+bones/7/bound_children = [  ]
+bones/8/bound_children = [  ]
+bones/9/bound_children = [  ]
+bones/10/bound_children = [  ]
+bones/22/bound_children = [  ]
+bones/23/bound_children = [  ]
+bones/24/bound_children = [  ]
+bones/37/bound_children = [  ]
+bones/38/bound_children = [  ]
+bones/39/bound_children = [  ]
+bones/41/bound_children = [  ]
+bones/42/bound_children = [  ]
 
 [node name="BoneAttachment" parent="Robots/Robot2/RobotArmature" index="1"]
 transform = Transform( -0.0564262, 0.0120857, -0.998333, 0.0680234, 0.99765, 0.00823249, 0.996087, -0.0674447, -0.0571156, 0.666745, 2.43728, -0.0168432 )
@@ -178,6 +214,50 @@ transform = Transform( -3.27835e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.27835e-08
 
 [node name="KitchenCabinetDrawer4" parent="Furniture" index="8" instance=ExtResource( 12 )]
 transform = Transform( -3.27835e-08, 0, 0.75, 0, 0.75, 0, -0.75, 0, -3.27835e-08, -11.047, 0.4, -1.93983 )
+
+[node name="Microwave" parent="Furniture" index="9" instance=ExtResource( 14 )]
+transform = Transform( 0.0758838, 0, 0.997117, 0, 1, 0, -0.997117, 0, 0.0758838, -10.5811, 2.36134, 0 )
+collision_mask = 31
+mass = 10.0
+
+[node name="Table" parent="Furniture" index="10" instance=ExtResource( 16 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.07376, 1.24712, 0.82081 )
+
+[node name="CushionChair" parent="Furniture" index="11" instance=ExtResource( 15 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.13271, 0.955136, -1.00785 )
+
+[node name="CushionChair2" parent="Furniture" index="12" instance=ExtResource( 15 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.01873, 0.955136, -0.52846 )
+
+[node name="CushionChair3" parent="Furniture" index="13" instance=ExtResource( 15 )]
+transform = Transform( -0.210847, 0, 0.977519, 0, 1, 0, -0.977519, 0, -0.210847, 6.04807, 0.955136, 2.12477 )
+
+[node name="CushionChair4" parent="Furniture" index="14" instance=ExtResource( 15 )]
+transform = Transform( 0.208987, 0, 0.977918, 0, 1, 0, -0.977918, 0, 0.208987, 4.10337, 0.955136, 2.05382 )
+
+[node name="Table2" parent="Furniture" index="15" instance=ExtResource( 16 )]
+transform = Transform( -0.999998, 0, 0.00200714, 0, 1, 0, -0.00200714, 0, -0.999998, 4.60209, 1.24712, -7.10387 )
+
+[node name="CushionChair5" parent="Furniture" index="16" instance=ExtResource( 15 )]
+transform = Transform( -0.999998, 0, 0.00200713, 0, 1, 0, -0.00200713, 0, -0.999998, 6.43263, 0.955136, -8.04124 )
+
+[node name="CushionChair6" parent="Furniture" index="17" instance=ExtResource( 15 )]
+transform = Transform( -0.999998, 0, 0.00200713, 0, 1, 0, -0.00200713, 0, -0.999998, 5.94946, 0.955136, -6.15618 )
+
+[node name="CushionChair7" parent="Furniture" index="18" instance=ExtResource( 15 )]
+transform = Transform( 0.97794, 0, 0.208885, 0, 1, 0, -0.208885, 0, 0.97794, 3.29617, 0.955136, -6.13217 )
+
+[node name="CushionChair8" parent="Furniture" index="19" instance=ExtResource( 15 )]
+transform = Transform( 0.977497, 0, -0.210949, 0, 1, 0, 0.210949, 0, 0.977497, 3.37103, 0.955136, -8.07672 )
+
+[node name="Plant" parent="Furniture" index="20" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.39366, 1.4324, -8.40985 )
+
+[node name="Plant3" parent="Furniture" index="21" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.51949, 1.4324, -8.40985 )
+
+[node name="Plant2" parent="Furniture" index="22" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42184, 1.4324, 3.11359 )
 
 [node name="BystanderSpawner" parent="Spawners" index="0" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.304, -23 )

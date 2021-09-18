@@ -134,3 +134,6 @@ func refresh_refill_counter():
 func update_lives():
 	if character_type == CHARACTER_TYPES.player:
 		get_tree().call_group("GUI", "update_Lives", lives)
+		
+func die():
+	get_tree().change_scene("res://GUI/GameOver.tscn")

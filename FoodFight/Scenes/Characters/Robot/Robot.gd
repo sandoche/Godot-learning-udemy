@@ -8,3 +8,6 @@ func _ready():
 func _process(delta):
 	if $RayCast.is_colliding():
 		try_to_fire()
+
+func update_lives():
+	pass

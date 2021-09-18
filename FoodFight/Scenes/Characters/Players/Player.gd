@@ -22,10 +22,12 @@ var can_refill = false
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	character_type = CHARACTER_TYPES.player
+	update_lives()
 
 func _physics_process(delta):
 	move()
 	animate()
+	refresh_refill_counter()
 	
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -111,7 +113,7 @@ func RefillArea_exited():
 	$Harp.stop()
 	
 func update_GUI():
-	get_node("../GUI/Ammo/Label").text = str(ammo)
+	get_tree().call_group("GUI", "refresh_AmmoCount", ammo)
 	
 func try_to_fire():
 	if can_fire and ammo > 0:
@@ -121,3 +123,14 @@ func try_to_fire():
 		ammo = clamp(ammo - 1, 0, max_ammo)
 		update_GUI()
 		action_state = -1
+
+func refresh_refill_counter():
+	if can_refill:
+		var refill_time_left = $RefillTimer.wait_time - $RefillTimer.time_left
+		get_tree().call_group("GUI", "Refill", refill_time_left)
+	else:
+		get_tree().call_group("GUI", "Refill", 0)
+		
+func update_lives():
+	if character_type == CHARACTER_TYPES.player:
+		get_tree().call_group("GUI", "update_Lives", lives)

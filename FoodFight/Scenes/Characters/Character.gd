@@ -39,6 +39,7 @@ func hurt(hurt_by):
 		lives -= 1
 		$HurtSfx.play()
 		check_lives()
+	update_lives()
 	
 func check_lives():
 	if lives < 1:
@@ -47,3 +48,5 @@ func check_lives():
 func die():
 	queue_free()
 
+func update_lives():
+	pass

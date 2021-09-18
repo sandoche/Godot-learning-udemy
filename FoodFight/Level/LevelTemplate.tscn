@@ -36,3 +36,4 @@ shadow_enabled = true
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15, 0.281923, -2 )
+collision_mask = 31

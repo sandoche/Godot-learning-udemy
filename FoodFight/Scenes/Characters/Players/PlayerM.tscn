@@ -5,6 +5,7 @@
 [ext_resource path="res://Scenes/Characters/Players/Player.gd" type="Script" id=3]
 
 [node name="Player" instance=ExtResource( 1 )]
+collision_layer = 2
 script = ExtResource( 3 )
 
 [node name="MeshInstance" parent="." index="0"]

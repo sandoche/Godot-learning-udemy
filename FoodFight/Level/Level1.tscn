@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Level/LevelTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Architecture/DoorwayWide.tscn" type="PackedScene" id=2]
@@ -8,10 +8,98 @@
 [ext_resource path="res://Bystanders/BystanderSpawner.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Characters/Robot/Robot.tscn" type="PackedScene" id=7]
 
+[sub_resource type="Animation" id=1]
+resource_name = "Movement"
+length = 4.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 11, 0.343, -8 ), Vector3( 11, 0.343, 3 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Movement"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 14, 0.343, 3 ), Vector3( 14, 0.343, -8 ) ]
+}
+
 [node name="Level1" instance=ExtResource( 1 )]
 
 [node name="Robot" parent="Robots" index="0" instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0.342731, 0 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0.343, -8 )
+
+[node name="TranslationAnimation" parent="Robots/Robot" index="6"]
+autoplay = "Movement"
+anims/Movement = SubResource( 1 )
+
+[node name="Robot2" parent="Robots" index="1" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0.343, 2.80454 )
+
+[node name="BoneAttachment" parent="Robots/Robot2/RobotArmature" index="1"]
+transform = Transform( 0.418914, 0.0226788, -0.907742, -0.152166, 0.987304, -0.0455562, 0.895185, 0.157212, 0.417047, 0.617283, 2.32998, 0.245125 )
+
+[node name="BoneAttachment001" parent="Robots/Robot2/RobotArmature" index="2"]
+transform = Transform( 0.11194, 0.0106911, 0.993657, -0.182026, 0.983244, 0.00992715, -0.9769, -0.181982, 0.112011, -0.681735, 2.31544, 0.240909 )
+
+[node name="BoneAttachment002" parent="Robots/Robot2/RobotArmature" index="3"]
+transform = Transform( -1, 2.15749e-07, -2.93496e-07, 2.0612e-07, 0.999474, 0.0324216, 3.00337e-07, 0.0324217, -0.999474, 0.633527, 0.024694, -0.138034 )
+
+[node name="BoneAttachment003" parent="Robots/Robot2/RobotArmature" index="4"]
+transform = Transform( -1, 1.64626e-06, -2.93497e-07, 1.63588e-06, 0.999474, 0.0324217, 3.46717e-07, 0.0324215, -0.999475, -0.640076, 0.024694, -0.138034 )
+
+[node name="BoneAttachment3" parent="Robots/Robot2/RobotArmature" index="5"]
+transform = Transform( -0.024524, -0.995853, 0.0875941, 0.107404, 0.0844888, 0.990619, -0.993912, 0.0337022, 0.104888, 1.21393, 2.35992, -0.028997 )
+
+[node name="BoneAttachment2" parent="Robots/Robot2/RobotArmature" index="6"]
+transform = Transform( -0.595862, 0.802805, -0.0212607, 0.0399633, 0.0560819, 0.997626, 0.80209, 0.593598, -0.0654996, -1.25332, 2.30973, 0.176476 )
+
+[node name="BoneAttachment004" parent="Robots/Robot2/RobotArmature" index="7"]
+transform = Transform( 0.995302, -0.0200061, 0.0947235, 0.0954259, 0.0376931, -0.994722, 0.0163301, 0.999088, 0.0394252, -0.0171255, 2.97683, 0.438508 )
+
+[node name="BoneAttachment005" parent="Robots/Robot2/RobotArmature" index="8"]
+transform = Transform( 0.991794, -0.12643, -0.0189653, 0.0106319, -0.0662688, 0.997756, -0.127398, -0.989806, -0.0643816, 0.630296, 1.55135, -0.0358706 )
+
+[node name="BoneAttachment006" parent="Robots/Robot2/RobotArmature" index="9"]
+transform = Transform( 0.977939, 0.207332, 0.0254833, -0.0118997, -0.0665094, 0.997715, 0.208541, -0.976074, -0.062574, -0.643307, 1.55135, -0.0358707 )
+
+[node name="BoneAttachment007" parent="Robots/Robot2/RobotArmature" index="10"]
+transform = Transform( 0.991795, -0.127524, 0.00899508, 0.010632, 0.152383, 0.988304, -0.127397, -0.980072, 0.152505, 0.641884, 0.941713, 0.00346694 )
+
+[node name="BoneAttachment008" parent="Robots/Robot2/RobotArmature" index="11"]
+transform = Transform( 0.977939, 0.20803, -0.018866, -0.0118997, 0.145633, 0.989307, 0.208541, -0.967245, 0.144922, -0.658877, 0.941738, 0.00236245 )
+
+[node name="BoneAttachment009" parent="Robots/Robot2/RobotArmature" index="12"]
+transform = Transform( -0.911603, -1.75909e-06, -0.411072, -0.39481, -0.278482, 0.875541, -0.114478, 0.960441, 0.253865, 0.582738, 2.40355, 0.266458 )
+
+[node name="BoneAttachment010" parent="Robots/Robot2/RobotArmature" index="13"]
+transform = Transform( -0.898185, -1.35003e-06, 0.439616, 0.422226, -0.278481, 0.862655, 0.122424, 0.960441, 0.250128, -0.636816, 2.40358, 0.266466 )
+
+[node name="BoneAttachment011" parent="Robots/Robot2/RobotArmature" index="14"]
+transform = Transform( 1, 6.86954e-07, -1.99243e-07, -5.76291e-11, -0.278481, -0.960442, -7.15264e-07, 0.960442, -0.278481, 0.00205059, 1.40809, 0.112672 )
+
+[node name="TranslationAnimation" parent="Robots/Robot2" index="6"]
+autoplay = "Movement"
+anims/Movement = SubResource( 2 )
 
 [node name="BystanderSpawner" parent="Spawners" index="0" instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 1.304, -23 )
@@ -129,3 +217,8 @@ transform = Transform( -2.62268e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -2.62268e-08, -
 
 [node name="Player" parent="." index="6"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0.281923, -2 )
+
+[editable path="Robots/Robot"]
+[editable path="Robots/Robot/RobotArmature"]
+[editable path="Robots/Robot2"]
+[editable path="Robots/Robot2/RobotArmature"]

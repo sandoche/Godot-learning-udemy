@@ -17,3 +17,4 @@ func get_files(folder):
 			file_count += 1
 
 	return gathered_files
+

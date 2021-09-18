@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://GUI/GameOver.tscn" type="PackedScene" id=1]
+
+[node name="Victory" instance=ExtResource( 1 )]
+
+[node name="Label" parent="CenterContainer/VBoxContainer" index="0"]
+text = "Yuhuu"
+
+[node name="BoneAttachment" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="1"]
+transform = Transform( 0.0367199, 0.903648, -0.426698, -0.175172, 0.426195, 0.887509, 0.983851, 0.0421566, 0.173944, 0.617283, 2.33039, -0.0168435 )
+
+[node name="BoneAttachment001" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="2"]
+transform = Transform( 0.209988, -0.874529, 0.437155, -0.256282, 0.382255, 0.887807, -0.943515, -0.298463, -0.143858, -0.681735, 2.31526, -0.0168434 )
+
+[node name="BoneAttachment002" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="3"]
+transform = Transform( -1, 2.15749e-07, -2.93496e-07, 2.0612e-07, 0.999474, 0.0324216, 3.00337e-07, 0.0324217, -0.999474, 0.633527, 0.024694, -0.138034 )
+
+[node name="BoneAttachment003" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="4"]
+transform = Transform( -1, 1.64626e-06, -2.93497e-07, 1.63588e-06, 0.999474, 0.0324217, 3.46717e-07, 0.0324215, -0.999475, -0.640076, 0.024694, -0.138034 )
+
+[node name="BoneAttachment3" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="5"]
+transform = Transform( -0.940245, -0.0490151, -0.336953, -0.251942, 0.765838, 0.591622, 0.229052, 0.641162, -0.732422, 0.897748, 1.74704, -0.131176 )
+
+[node name="BoneAttachment2" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="6"]
+transform = Transform( -0.965457, 0.033135, 0.258447, 0.218196, 0.644958, 0.732407, -0.142419, 0.763497, -0.629908, -0.933203, 1.80456, 0.065909 )
+
+[node name="BoneAttachment004" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="7"]
+transform = Transform( 0.997931, -0.0397531, 0.0505244, 0.052055, 0.038458, -0.997902, 0.0377267, 0.998467, 0.0404482, -0.0171258, 3.00552, -0.0112471 )
+
+[node name="BoneAttachment005" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="8"]
+transform = Transform( 0.992255, -0.116352, -0.0435295, 0.00787763, -0.290796, 0.956778, -0.12397, -0.949764, -0.287614, 0.630296, 1.50432, -0.0698895 )
+
+[node name="BoneAttachment006" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="9"]
+transform = Transform( 0.979294, 0.191541, 0.0655451, -0.00718253, -0.290729, 0.956805, 0.202304, -0.937529, -0.283317, -0.643307, 1.50431, -0.0698896 )
+
+[node name="BoneAttachment007" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="10"]
+transform = Transform( 0.992255, -0.121642, 0.0251836, 0.00787775, 0.263888, 0.964591, -0.12397, -0.956865, 0.262869, 0.656893, 0.919718, 0.105845 )
+
+[node name="BoneAttachment008" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="11"]
+transform = Transform( 0.979293, 0.196988, -0.0466442, -0.00718262, 0.264014, 0.964582, 0.202303, -0.944202, 0.260043, -0.683355, 0.9197, 0.103219 )
+
+[node name="BoneAttachment009" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="12"]
+transform = Transform( -0.911603, -1.73079e-06, -0.411072, -0.411072, -1.51247e-06, 0.911603, -2.2985e-06, 0.999998, 8.71718e-07, 0.582738, 2.407, -0.0168434 )
+
+[node name="BoneAttachment010" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="13"]
+transform = Transform( -0.898185, -1.32173e-06, 0.439616, 0.439616, -4.32134e-07, 0.898185, -1.30758e-06, 0.999999, 3.20375e-07, -0.636816, 2.40703, -0.0168434 )
+
+[node name="BoneAttachment011" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="14"]
+transform = Transform( 1, 7.15256e-07, -5.82076e-11, -5.82076e-11, 0, -1, -7.15256e-07, 1, 4.16333e-17, 0.00205059, 1.40809, 0.112672 )
+
+[editable path="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot"]
+[editable path="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature"]

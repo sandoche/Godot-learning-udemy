@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=1]
-[ext_resource path="res://Utility/file_grabber.gd" type="Script" id=2]
+[ext_resource path="res://Level/LevelTemplate.gd" type="Script" id=2]
 [ext_resource path="res://GUI/PauseMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GUI/GameGUI.tscn" type="PackedScene" id=5]

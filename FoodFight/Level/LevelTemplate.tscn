@@ -28,6 +28,8 @@ shape = SubResource( 1 )
 transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 12, 15, 17 )
 shadow_enabled = true
 
+[node name="Spawners" type="Node" parent="."]
+
 [node name="Walls" type="Node" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]

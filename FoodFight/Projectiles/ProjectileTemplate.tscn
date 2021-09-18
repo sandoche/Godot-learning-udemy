@@ -12,6 +12,8 @@ radius = 0.25
 
 [node name="ProjectileTemplate" type="RigidBody"]
 continuous_cd = true
+contacts_reported = 1
+contact_monitor = true
 script = ExtResource( 1 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
@@ -31,4 +33,5 @@ pitch_scale = 1.5
 autoplay = true
 doppler_tracking = 2
 
+[connection signal="body_shape_entered" from="." to="." method="_on_ProjectileTemplate_body_shape_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

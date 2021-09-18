@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Models/Bystanders/Female_Walking.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Bystanders/BystandersFigures/Bystander.tscn" type="PackedScene" id=2]
+
+[node name="Bystander6" instance=ExtResource( 2 )]
+
+[node name="MeshInstance" parent="." index="0"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -1, 0 )
+mesh = ExtResource( 1 )

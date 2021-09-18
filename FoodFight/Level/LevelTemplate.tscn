@@ -27,7 +27,7 @@ shape = SubResource( 1 )
 [node name="Lightning" type="Node" parent="."]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Lightning"]
-transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 12, 15, 17 )
+transform = Transform( 0.965926, 1.43934e-08, 0.258819, -0.0707972, 0.961861, 0.264219, -0.248948, -0.27354, 0.929086, 12, 9.01182, 35.7034 )
 shadow_enabled = true
 
 [node name="Spawners" type="Node" parent="."]

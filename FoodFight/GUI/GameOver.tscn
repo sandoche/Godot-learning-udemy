@@ -63,10 +63,10 @@ script = null
 autoplay = "Robot_ThumbsUp"
 
 [node name="BoneAttachment" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="1"]
-transform = Transform( 0.0367199, 0.903648, -0.426698, -0.175172, 0.426195, 0.887509, 0.983851, 0.0421566, 0.173944, 0.617283, 2.33039, -0.0168435 )
+transform = Transform( -0.0564262, 0.0120857, -0.998333, 0.0680234, 0.99765, 0.00823249, 0.996087, -0.0674447, -0.0571156, 0.666745, 2.43728, -0.0168432 )
 
 [node name="BoneAttachment001" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="2"]
-transform = Transform( 0.209988, -0.874529, 0.437155, -0.256282, 0.382255, 0.887807, -0.943515, -0.298463, -0.143858, -0.681735, 2.31526, -0.0168434 )
+transform = Transform( -0.059884, -0.0283931, 0.997801, -0.264981, 0.964185, 0.0115335, -0.962391, -0.263708, -0.0652628, -0.738989, 2.43851, -0.0168432 )
 
 [node name="BoneAttachment002" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="3"]
 transform = Transform( -1, 2.15749e-07, -2.93496e-07, 2.0612e-07, 0.999474, 0.0324216, 3.00337e-07, 0.0324217, -0.999474, 0.633527, 0.024694, -0.138034 )
@@ -75,34 +75,37 @@ transform = Transform( -1, 2.15749e-07, -2.93496e-07, 2.0612e-07, 0.999474, 0.03
 transform = Transform( -1, 1.64626e-06, -2.93497e-07, 1.63588e-06, 0.999474, 0.0324217, 3.46717e-07, 0.0324215, -0.999475, -0.640076, 0.024694, -0.138034 )
 
 [node name="BoneAttachment3" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="5"]
-transform = Transform( -0.940245, -0.0490151, -0.336953, -0.251942, 0.765838, 0.591622, 0.229052, 0.641162, -0.732422, 0.897748, 1.74704, -0.131176 )
+transform = Transform( 0.0388434, -0.0122599, -0.99917, 0.000847305, 0.999925, -0.0122363, 0.999244, -0.000370596, 0.0388509, 1.32294, 2.43187, 0.0206985 )
 
 [node name="BoneAttachment2" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="6"]
-transform = Transform( -0.965457, 0.033135, 0.258447, 0.218196, 0.644958, 0.732407, -0.142419, 0.763497, -0.629908, -0.933203, 1.80456, 0.065909 )
+transform = Transform( 0.0357705, 0.0187618, 0.999184, -0.177214, 0.984097, -0.0121343, -0.983521, -0.176636, 0.0385265, -1.31296, 2.43187, 0.0206984 )
 
 [node name="BoneAttachment004" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="7"]
-transform = Transform( 0.997931, -0.0397531, 0.0505244, 0.052055, 0.038458, -0.997902, 0.0377267, 0.998467, 0.0404482, -0.0171258, 3.00552, -0.0112471 )
+transform = Transform( 0.999996, -5.63962e-05, 0.00280693, 0.00280538, -0.0187642, -0.99982, 0.000109056, 0.999824, -0.018764, 6.14762e-09, 3.03846, -0.0107013 )
 
 [node name="BoneAttachment005" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="8"]
-transform = Transform( 0.992255, -0.116352, -0.0435295, 0.00787763, -0.290796, 0.956778, -0.12397, -0.949764, -0.287614, 0.630296, 1.50432, -0.0698895 )
+transform = Transform( 1, -5.21525e-07, -2.88221e-08, -6.37748e-08, -0.176683, 0.984268, -5.18403e-07, -0.984274, -0.176683, 0.630296, 1.5368, -0.0698894 )
 
 [node name="BoneAttachment006" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="9"]
-transform = Transform( 0.979294, 0.191541, 0.0655451, -0.00718253, -0.290729, 0.956805, 0.202304, -0.937529, -0.283317, -0.643307, 1.50431, -0.0698896 )
+transform = Transform( 1, 4.47292e-07, -2.88221e-08, 1.07397e-07, -0.176683, 0.984268, 4.35164e-07, -0.984274, -0.176683, -0.643307, 1.5368, -0.0698895 )
 
 [node name="BoneAttachment007" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="10"]
-transform = Transform( 0.992255, -0.121642, 0.0251836, 0.00787775, 0.263888, 0.964591, -0.12397, -0.956865, 0.262869, 0.656893, 0.919718, 0.105845 )
+transform = Transform( 1, -2.54154e-07, 3.50088e-09, 4.47876e-08, 0.189744, 0.981834, -2.5019e-07, -0.98184, 0.189746, 0.630296, 0.935406, 0.0380651 )
 
 [node name="BoneAttachment008" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="11"]
-transform = Transform( 0.979293, 0.196988, -0.0466442, -0.00718262, 0.264014, 0.964582, 0.202303, -0.944202, 0.260043, -0.683355, 0.9197, 0.103219 )
+transform = Transform( 1, -2.01132e-07, -5.3216e-08, 9.04119e-08, 0.189744, 0.981834, -1.87384e-07, -0.98184, 0.189746, -0.643307, 0.935406, 0.038065 )
 
 [node name="BoneAttachment009" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="12"]
-transform = Transform( -0.911603, -1.73079e-06, -0.411072, -0.411072, -1.51247e-06, 0.911603, -2.2985e-06, 0.999998, 8.71718e-07, 0.582738, 2.407, -0.0168434 )
+transform = Transform( -0.0262237, 2.39866e-07, -0.999656, -0.999656, -2.22027e-06, 0.0262235, -2.91318e-06, 0.999999, 3.12459e-07, 0.582738, 2.43949, -0.0168432 )
 
 [node name="BoneAttachment010" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="13"]
-transform = Transform( -0.898185, -1.32173e-06, 0.439616, 0.439616, -4.32134e-07, 0.898185, -1.30758e-06, 0.999999, 3.20375e-07, -0.636816, 2.40703, -0.0168434 )
+transform = Transform( -0.00985826, -2.69916e-07, 0.999951, 0.999951, 7.59959e-07, 0.00985831, -1.02818e-06, 1, 2.61236e-07, -0.636816, 2.43952, -0.0168431 )
 
 [node name="BoneAttachment011" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot/RobotArmature" index="14"]
-transform = Transform( 1, 7.15256e-07, -5.82076e-11, -5.82076e-11, 0, -1, -7.15256e-07, 1, 4.16333e-17, 0.00205059, 1.40809, 0.112672 )
+transform = Transform( 1, 7.15256e-07, 0, 0, 0, -1, -7.15256e-07, 1, 0, 0.00205059, 1.44057, 0.112672 )
+
+[node name="Lives" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Robot" index="8"]
+visible = false
 
 [node name="Camera" type="Camera" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3 )

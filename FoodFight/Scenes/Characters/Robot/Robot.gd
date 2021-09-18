@@ -10,4 +10,7 @@ func _process(delta):
 		try_to_fire()
 
 func update_lives():
-	pass
+	if lives > 0:
+		var life = $Lives.get_child(0).get_child(0)
+		life.play("loose_life")
+	

@@ -20,3 +20,7 @@ func _on_FullscreenButton_pressed():
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
+
+
+func _on_CustomiseButton_pressed():
+	get_tree().change_scene("res://Scenes/CharacterCustomisation.tscn")

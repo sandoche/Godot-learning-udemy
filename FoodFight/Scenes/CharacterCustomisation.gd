@@ -3,10 +3,13 @@ extends Spatial
 var material_list = {}
 var current_material = 0
 var current_player
+var selected_material # the material we are passing to customisation.gd
 
 func _ready():
+	get_tree().paused = false
 	material_list = file_grabber.get_files("res://Scenes/Customisation/PlayerMaterials/")
 	current_player = "Female"
+	selected_material = load(material_list[current_material])
 	$ArmatureM.hide()
 
 func _on_CharacterSelect_item_selected(index):
@@ -41,9 +44,13 @@ func change_material(direction):
 	var Male = $ArmatureM/Mesh
 	var Female = $ArmatureF/Mesh
 	
-	Male.set_surface_material(0, load(material_list[current_material]))
-	Female.set_surface_material(0, load(material_list[current_material]))
+	selected_material = load(material_list[current_material])
+	
+	Male.set_surface_material(0, selected_material)
+	Female.set_surface_material(0, selected_material)
 	
 
 func _on_StartButton_pressed():
+	customisation.Player_material = selected_material
+	customisation.Player_character = current_player
 	get_tree().change_scene("res://Level/Level1.tscn")

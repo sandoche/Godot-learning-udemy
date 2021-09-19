@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Models/Architecture/floorFull.mesh" type="ArrayMesh" id=1]
 [ext_resource path="res://Level/LevelTemplate.gd" type="Script" id=2]
 [ext_resource path="res://GUI/PauseMenu.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GUI/GameGUI.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConcavePolygonShape" id=1]
@@ -36,12 +35,11 @@ shadow_enabled = true
 
 [node name="Walls" type="Node" parent="."]
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15, 0.281923, -2 )
-collision_mask = 31
-
 [node name="GUI" type="Node" parent="."]
 
 [node name="PauseMenu" parent="GUI" instance=ExtResource( 3 )]
 
 [node name="GameGUI" parent="GUI" instance=ExtResource( 5 )]
+
+[node name="PlayerStartPosition" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )

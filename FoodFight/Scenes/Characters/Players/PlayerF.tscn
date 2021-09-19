@@ -4,6 +4,7 @@
 [ext_resource path="res://Scenes/Characters/Players/PlayerTemplate.tscn" type="PackedScene" id=2]
 
 [node name="Player" instance=ExtResource( 2 )]
+collision_mask = 31
 
 [node name="Armature" parent="." index="8" instance=ExtResource( 1 )]
 transform = Transform( 0.004, 0, 0, 0, 0.004, 0, 0, 0, 0.004, 0, 0, 0 )

@@ -62,6 +62,22 @@ extents = Vector3( 0.001, 4, 8 )
 [node name="Robot" parent="Robots" index="0" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 11, 0.343, -8 )
 
+[node name="RobotArmature" parent="Robots/Robot" index="4"]
+bones/1/bound_children = [  ]
+bones/2/bound_children = [  ]
+bones/7/bound_children = [  ]
+bones/8/bound_children = [  ]
+bones/9/bound_children = [  ]
+bones/10/bound_children = [  ]
+bones/22/bound_children = [  ]
+bones/23/bound_children = [  ]
+bones/24/bound_children = [  ]
+bones/37/bound_children = [  ]
+bones/38/bound_children = [  ]
+bones/39/bound_children = [  ]
+bones/41/bound_children = [  ]
+bones/42/bound_children = [  ]
+
 [node name="BoneAttachment" parent="Robots/Robot/RobotArmature" index="1"]
 transform = Transform( -0.0564262, 0.0120857, -0.998333, 0.0680234, 0.99765, 0.00823249, 0.996087, -0.0674447, -0.0571156, 0.666745, 2.43728, -0.0168432 )
 
@@ -110,6 +126,22 @@ anims/Movement = SubResource( 1 )
 
 [node name="Robot2" parent="Robots" index="1" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 14, 0.343, 2.80454 )
+
+[node name="RobotArmature" parent="Robots/Robot2" index="4"]
+bones/1/bound_children = [  ]
+bones/2/bound_children = [  ]
+bones/7/bound_children = [  ]
+bones/8/bound_children = [  ]
+bones/9/bound_children = [  ]
+bones/10/bound_children = [  ]
+bones/22/bound_children = [  ]
+bones/23/bound_children = [  ]
+bones/24/bound_children = [  ]
+bones/37/bound_children = [  ]
+bones/38/bound_children = [  ]
+bones/39/bound_children = [  ]
+bones/41/bound_children = [  ]
+bones/42/bound_children = [  ]
 
 [node name="BoneAttachment" parent="Robots/Robot2/RobotArmature" index="1"]
 transform = Transform( -0.0564262, 0.0120857, -0.998333, 0.0680234, 0.99765, 0.00823249, 0.996087, -0.0674447, -0.0571156, 0.666745, 2.43728, -0.0168432 )
@@ -527,8 +559,8 @@ collision_mask = 2
 [node name="CollisionShape" type="CollisionShape" parent="Walls/PlayerBoundary" index="0"]
 shape = SubResource( 3 )
 
-[node name="Player" parent="." index="6"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -9, 0.281923, -4.51246 )
+[node name="PlayerStartPosition" parent="." index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.418, 0.25, 0.776 )
 
 [node name="RefillArea" parent="." index="8" instance=ExtResource( 18 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8756, 0.754778, -8.34618 )

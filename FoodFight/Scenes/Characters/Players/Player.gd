@@ -22,6 +22,8 @@ var can_refill = false
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	character_type = CHARACTER_TYPES.player
+	if customisation.Player_material != null:
+		$Armature/Mesh.set_surface_material(0, customisation.Player_material)
 	update_lives()
 
 func _physics_process(delta):

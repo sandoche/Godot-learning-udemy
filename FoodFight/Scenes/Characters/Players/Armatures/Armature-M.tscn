@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/Customisation/PlayerMaterials/1..material" type="Material" id=1]
 [ext_resource path="res://Scenes/Characters/Animations-Male/death.anim" type="Animation" id=2]
+[ext_resource path="res://Scenes/Characters/Players/AnimationTree.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 resource_name = "Human_Mesh"
@@ -985,39 +986,6 @@ tracks/33/imported = false
 tracks/33/enabled = true
 tracks/33/keys = PoolRealArray( 0, 1, 1.85333e-07, 0, 2.98023e-08, 0.0409781, -0.00313212, -0.000852907, 0.999155, 1, 0.999999, 1, 0.4, 1, 1.85333e-07, 0, 2.98023e-08, 0.0406866, -0.00310984, -0.00084689, 0.999167, 1, 0.999999, 0.999999, 0.533333, 1, 1.85333e-07, 0, 2.98023e-08, 0.040305, -0.00308073, -0.000838937, 0.999182, 1, 1, 1, 5.93333, 1, 1.85333e-07, 0, 2.98023e-08, 0.0407482, -0.00311448, -0.000848146, 0.999164, 1, 1, 1, 6.13333, 1, 1.85333e-07, 0, 2.98023e-08, 0.0410453, -0.00313719, -0.000854022, 0.999152, 1, 0.999999, 0.999999, 6.2, 1, 1.85333e-07, 0, 2.98023e-08, 0.0410597, -0.00313838, -0.000854665, 0.999151, 1, 0.999999, 0.999999, 6.39167, 1, 1.85333e-07, 0, 2.98023e-08, 0.0409699, -0.00313157, -0.000852782, 0.999155, 1, 0.999999, 0.999999 )
 
-[sub_resource type="AnimationNodeBlend3" id=6]
-
-[sub_resource type="AnimationNodeAnimation" id=7]
-animation = "Idle"
-
-[sub_resource type="AnimationNodeBlend2" id=8]
-
-[sub_resource type="AnimationNodeAnimation" id=9]
-animation = "Working"
-
-[sub_resource type="AnimationNodeAnimation" id=10]
-animation = "Run"
-
-[sub_resource type="AnimationNodeAnimation" id=11]
-animation = "Punch"
-
-[sub_resource type="AnimationNodeBlendTree" id=12]
-graph_offset = Vector2( 519.002, 0 )
-nodes/Action/node = SubResource( 6 )
-nodes/Action/position = Vector2( 1170, 230 )
-nodes/Idle/node = SubResource( 7 )
-nodes/Idle/position = Vector2( 680, 220 )
-nodes/Move/node = SubResource( 8 )
-nodes/Move/position = Vector2( 935, 243.25 )
-nodes/Pickup/node = SubResource( 9 )
-nodes/Pickup/position = Vector2( 910, 480 )
-nodes/Run/node = SubResource( 10 )
-nodes/Run/position = Vector2( 690, 390 )
-nodes/Throw/node = SubResource( 11 )
-nodes/Throw/position = Vector2( 820, 70 )
-nodes/output/position = Vector2( 1370, 240 )
-node_connections = [ "Action", 0, "Throw", "Action", 1, "Move", "Action", 2, "Pickup", "output", 0, "Action", "Move", 0, "Idle", "Move", 1, "Run" ]
-
 [node name="Armature" type="Skeleton"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 bones/0/name = "Bone 0"
@@ -1239,9 +1207,4 @@ anims/Punch = SubResource( 3 )
 anims/Run = SubResource( 4 )
 anims/Working = SubResource( 5 )
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 12 )
-anim_player = NodePath("../AnimationPlayer")
-active = true
-parameters/Action/blend_amount = 0.0
-parameters/Move/blend_amount = 0.0
+[node name="AnimationTree" parent="." instance=ExtResource( 3 )]

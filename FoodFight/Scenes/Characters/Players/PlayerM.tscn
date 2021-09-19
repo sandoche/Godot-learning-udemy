@@ -1,29 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scenes/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Characters/Players/PlayerTemplate.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Characters/Players/Player.gd" type="Script" id=3]
-[ext_resource path="res://SFX/harp-glissando-up.wav" type="AudioStream" id=4]
 
 [node name="Player" instance=ExtResource( 1 )]
-collision_layer = 2
-script = ExtResource( 3 )
 
-[node name="MeshInstance" parent="." index="0"]
-visible = false
-
-[node name="Armature" parent="." index="2" instance=ExtResource( 2 )]
+[node name="Armature" parent="." index="8" instance=ExtResource( 2 )]
 transform = Transform( 0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 0, 0, 0 )
-
-[node name="Camera" type="Camera" parent="." index="3"]
-transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, -4 )
-doppler_tracking = 2
-
-[node name="RefillTimer" type="Timer" parent="." index="6"]
-one_shot = true
-
-[node name="Harp" type="AudioStreamPlayer" parent="." index="7"]
-stream = ExtResource( 4 )
-volume_db = -10.0
-
-[connection signal="timeout" from="RefillTimer" to="." method="_on_RefillTimer_timeout"]

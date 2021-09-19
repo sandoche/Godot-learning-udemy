@@ -44,6 +44,7 @@ margin_left = 27.0
 margin_right = 66.0
 margin_bottom = 31.0
 texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 5 )
 texture_hover = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Controls/HBoxContainer"]
@@ -61,6 +62,7 @@ margin_left = 134.0
 margin_right = 173.0
 margin_bottom = 31.0
 texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 3 )
 texture_hover = ExtResource( 2 )
 
 [node name="StartButton" type="Button" parent="Controls"]

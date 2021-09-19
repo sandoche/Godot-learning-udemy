@@ -1,12 +1,29 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Fonts/Kenney Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://GUI/Theme.tres" type="Theme" id=2]
 [ext_resource path="res://GUI/IntroScreen.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Ammo/models/Burger.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://Scenes/Ammo/models/doughnut.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://Scenes/Ammo/models/Milkshake.mesh" type="ArrayMesh" id=6]
+[ext_resource path="res://Scenes/Ammo/models/Cupcake.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://Scenes/Ammo/models/Cookie.mesh" type="ArrayMesh" id=8]
+[ext_resource path="res://SFX/interlude.ogg" type="AudioStream" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 36
 font_data = ExtResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=2]
+emission_shape = 1
+emission_sphere_radius = 2.0
+flag_rotate_y = true
+gravity = Vector3( 0, 9.8, 3 )
+radial_accel = -12.22
+damping = 0.57
+angle = 351.9
+scale = 0.5
+scale_random = 0.99
 
 [node name="IntroScreen" type="Control"]
 anchor_right = 1.0
@@ -65,8 +82,66 @@ __meta__ = {
 [node name="Viewport" type="Viewport" parent="CenterContainer/VBoxContainer/ViewportContainer"]
 size = Vector2( 300, 300 )
 transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 3
 
 [node name="Camera" type="Camera" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport"]
+
+[node name="OmniLight" type="OmniLight" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+light_color = Color( 1, 0.470588, 0, 1 )
+light_energy = 8.47
+shadow_enabled = true
+omni_range = 3.1
+
+[node name="OmniLight2" type="OmniLight" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+light_color = Color( 0.0169106, 0.132951, 0.890625, 1 )
+light_energy = 8.47
+shadow_enabled = true
+omni_range = 3.1
+
+[node name="Particles" type="Node" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport"]
+
+[node name="Burgers" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles"]
+transform = Transform( 1, 0, 0, 0, 0.0871558, -0.996195, 0, 0.996195, 0.0871558, 0, 0, -5 )
+amount = 4
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource( 2 )
+draw_pass_1 = ExtResource( 4 )
+
+[node name="Cookies" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles"]
+transform = Transform( 0.34202, 0.0818996, -0.936117, -0.939693, 0.029809, -0.340719, 0, 0.996195, 0.0871558, 0, 0, -5 )
+amount = 4
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource( 2 )
+draw_pass_1 = ExtResource( 8 )
+
+[node name="Donut" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles"]
+transform = Transform( 0.34202, 0.0818996, -0.936117, -0.939693, 0.029809, -0.340719, 0, 0.996195, 0.0871558, 0, 0, -5 )
+amount = 4
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource( 2 )
+draw_pass_1 = ExtResource( 5 )
+
+[node name="Cupcake" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles"]
+transform = Transform( 0.34202, 0.0818996, -0.936117, -0.939693, 0.029809, -0.340719, 0, 0.996195, 0.0871558, 0, 0, -5 )
+amount = 4
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource( 2 )
+draw_pass_1 = ExtResource( 7 )
+
+[node name="Milkshake" type="Particles" parent="CenterContainer/VBoxContainer/ViewportContainer/Viewport/Particles"]
+transform = Transform( 0.34202, 0.0818996, -0.936117, -0.939693, 0.029809, -0.340719, 0, 0.996195, 0.0871558, 0, 0, -5 )
+amount = 4
+lifetime = 2.0
+randomness = 1.0
+process_material = SubResource( 2 )
+draw_pass_1 = ExtResource( 6 )
 
 [node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 408.0
@@ -79,6 +154,11 @@ margin_top = 438.0
 margin_right = 315.0
 margin_bottom = 456.0
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -10.0
+autoplay = true
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

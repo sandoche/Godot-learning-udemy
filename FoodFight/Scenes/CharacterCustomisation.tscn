@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Materials/wood.material" type="Material" id=1]
 [ext_resource path="res://Materials/Red.material" type="Material" id=2]
 [ext_resource path="res://Materials/MetalDark.material" type="Material" id=3]
-[ext_resource path="res://Scenes/Characters/Players/PlayerF.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=5]
+[ext_resource path="res://GUI/CustomisationUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-F.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Characters/Players/Armatures/Armature-M.tscn" type="PackedScene" id=6]
 
 [sub_resource type="CylinderMesh" id=1]
 material = ExtResource( 2 )
@@ -17,12 +18,6 @@ material = ExtResource( 1 )
 material = ExtResource( 3 )
 
 [node name="CharacterCustomisation" type="Spatial"]
-
-[node name="ArmatureM" parent="." instance=ExtResource( 5 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.177386, 0 )
-
-[node name="ArmatureF" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.168454, 0 )
 
 [node name="Scenary" type="Node" parent="."]
 
@@ -58,3 +53,12 @@ spot_range = 1816.4
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52582, 3.63136 )
+
+[node name="CustomisationUI" parent="." instance=ExtResource( 4 )]
+
+[node name="ArmatureF" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.004, 0, 0, 0, 0.004, 0, 0, 0, 0.004, 0, 0.200204, 0 )
+
+[node name="ArmatureM" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, 0, 0.178304, 0 )
+visible = false

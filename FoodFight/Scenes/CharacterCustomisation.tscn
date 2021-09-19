@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Materials/wood.material" type="Material" id=1]
+[ext_resource path="res://Materials/Red.material" type="Material" id=2]
+[ext_resource path="res://Materials/MetalDark.material" type="Material" id=3]
+[ext_resource path="res://Scenes/Characters/Players/PlayerF.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Characters/Players/PlayerM.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CylinderMesh" id=1]
+material = ExtResource( 2 )
+height = 0.3
+
+[sub_resource type="PlaneMesh" id=2]
+material = ExtResource( 1 )
+
+[sub_resource type="SphereMesh" id=3]
+material = ExtResource( 3 )
+
+[node name="CharacterCustomisation" type="Spatial"]
+
+[node name="ArmatureM" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.177386, 0 )
+
+[node name="ArmatureF" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.168454, 0 )
+
+[node name="Scenary" type="Node" parent="."]
+
+[node name="Podium" type="MeshInstance" parent="Scenary"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Floor" type="MeshInstance" parent="Scenary"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="Wall" type="MeshInstance" parent="Scenary"]
+transform = Transform( 10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0 )
+mesh = SubResource( 3 )
+material/0 = null
+
+[node name="Lights" type="Node" parent="."]
+
+[node name="SpotLight" type="SpotLight" parent="Lights"]
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 4.11316, 2.32254 )
+light_color = Color( 1, 0.447059, 0, 1 )
+light_energy = 8.43
+shadow_enabled = true
+spot_range = 73.9
+
+[node name="SpotLight2" type="SpotLight" parent="Lights"]
+transform = Transform( 1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, -3.72053, 0.581773, 2.27525 )
+light_color = Color( 0.313726, 0.384314, 0.662745, 1 )
+light_energy = 9.0
+shadow_enabled = true
+spot_range = 1816.4
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.52582, 3.63136 )

@@ -24,19 +24,19 @@ Find all the binaries in the [game-binaries](/games-binaries) folder.
 ### 🖼️ Screenshots
 
 #### LoonyLips
-xxx
+![loonylips](/docs/screenshots/loonylips.png)
 
 #### HoppyDays
-xxx
+![hoppydays](/docs/screenshots/hoppydays.png)
 
 #### HeistMeisters
-xxx
+![heistmeisters](/docs/screenshots/heistmeisters.png)
 
 #### CubeDudeKickabout
-xxx
+![cubedude](/docs/screenshots/cubedude.png)
 
 #### FoodFight
-xxx
+![foodfight](/docs/screenshots/foodfight.png)
 
 
 ## ⭐️ Show your support

@@ -4,7 +4,9 @@
 [![Medium Badge](https://badgen.net/badge/icon/medium?icon=medium&label)](https://medium.com/@sandoche)
 [![Twitter: sandochee](https://img.shields.io/twitter/follow/sandochee.svg?style=social)](https://twitter.com/sandochee)
 
-Godot Learning repository for the [Udemy Godot course](https://www.udemy.com/course/discovering-godot/)
+Godot Learning repository for the [Udemy Godot course](https://www.udemy.com/course/discovering-godot/).
+
+Projects made with Godot Engine v3.3.4
 
 ## 📋 Projects
 

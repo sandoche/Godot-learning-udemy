@@ -6,6 +6,10 @@
 
 Godot Learning repository for the [Udemy Godot course](https://www.udemy.com/course/discovering-godot/).
 
+- Learning Lab: [Game Development with Godot Engine](https://learn.uno/learning/game-development-godot-engine/)
+- My learning story: [Building a Video Game in One Week With Godot](https://medium.com/learning-lab/building-a-video-game-in-one-week-with-godot-a663479e44b0) 
+- The mobile game I built: [Multiplication Kingdom](https://multiplicationkingdom.learn.uno/)
+
 Projects made with Godot Engine v3.3.4
 
 ## 📋 Projects

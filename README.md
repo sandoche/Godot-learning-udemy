@@ -1,6 +1,6 @@
 # Godot Learning
 
-[![License][license-src]][license-href]
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Medium Badge](https://badgen.net/badge/icon/medium?icon=medium&label)](https://medium.com/@sandoche)
 [![Twitter: sandochee](https://img.shields.io/twitter/follow/sandochee.svg?style=social)](https://twitter.com/sandochee)
 
@@ -64,6 +64,3 @@ If you like this project, feel free to donate:
 
 Copyright (c) Sandoche Adittane
 
-<!-- Badges -->
-[license-src]: https://img.shields.io/github/license/sandoche/Godot-learning-udemy
-[license-href]: ./LICENSE
